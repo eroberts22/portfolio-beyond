@@ -4,7 +4,7 @@
 
 <script>
 export default {
-  name: 'Projects-View'
+  name: 'ProjectsView'
 }
 </script>
 
