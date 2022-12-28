@@ -16,8 +16,7 @@ export default {
 
 <style>
 body {
-  
-  /* background: #000; */
+  background: #000;
   color: gainsboro;
   margin: 0;
   padding: 0;
