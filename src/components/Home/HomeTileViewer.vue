@@ -1,7 +1,7 @@
 <template>
   <div class="central-box">
     <div class="row">
-      <div :key="card.text" v-for="card in cards">
+      <div class="col-lg-4 col-sm-12" :key="card.text" v-for="card in cards">
         <HomeTile :homeTile="card" />
       </div>
     </div>
