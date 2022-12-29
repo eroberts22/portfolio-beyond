@@ -1,6 +1,6 @@
 <template>
   <div class="page-title">Welcome to Portfolio Beyond<span>.</span></div>
-  <div class="page-sub-title">My name is <router-link to="/about">Liz Roberts<span>.</span></router-link></div>
+  <div class="page-sub-title">My name is <router-link :to="{ name: 'About'}">Liz Roberts<span>.</span></router-link></div>
 </template>
 
 <script>

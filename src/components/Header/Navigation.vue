@@ -1,9 +1,9 @@
 <template>
   <div class="navbar-links">
-    <router-link to="/">HOME</router-link>
-    <router-link to="/projects">PROJECTS</router-link>
-    <router-link to="/art">ART PORTFOLIO</router-link>
-    <router-link to="/about">ABOUT ME</router-link>
+    <router-link :to="{ name: 'Home'}">HOME</router-link>
+    <router-link :to="{ name: 'Projects'}">PROJECTS</router-link>
+    <router-link :to="{ name: 'Art'}">ART PORTFOLIO</router-link>
+    <router-link :to="{ name: 'About'}">ABOUT ME</router-link>
   </div>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
 <div class="logo">
-    <router-link to="/">Portfolio Beyond<span>.</span></router-link>
+    <router-link :to="{ name: 'Home'}">Portfolio Beyond<span>.</span></router-link>
 </div>
 </template>
 
