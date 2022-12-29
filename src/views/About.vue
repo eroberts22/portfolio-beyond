@@ -1,10 +1,15 @@
 <template>
-  <div>About</div>
+  <AboutMainContent />
 </template>
 
 <script>
+import AboutMainContent from '../components/About/AboutMainContent.vue'
+
 export default {
-  name: 'AboutView'
+  name: 'AboutView',
+  components: {
+    AboutMainContent
+  }
 }
 </script>
 
