@@ -25,12 +25,12 @@ export default {
   padding-left: 5%;
   padding-right: 5%;
   padding-bottom: 5%;
-  color: turquoise;
+  color: var(--turquoise);
   transition: color 0.3s;
 }
 
 .small-logo:hover {
   opacity: 0.7;
-  color: blue;
+  color: var(--med-blue);
 }
 </style>

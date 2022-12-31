@@ -1,16 +1,65 @@
 <template>
-  <div class="navbar-links">
+    <div v-show="!mobile" class="navbar-links">
     <router-link :to="{ name: 'Home'}">HOME</router-link>
     <router-link :to="{ name: 'Projects'}">PROJECTS</router-link>
     <router-link :to="{ name: 'Art'}">ART PORTFOLIO</router-link>
     <router-link :to="{ name: 'About'}">ABOUT ME</router-link>
   </div>
+  <div class="icon">
+    <font-awesome-icon class="sub-icon" @click="toggleMobileNav" v-show="mobile" :class="{ 'icon-active': mobileNav }" :icon="['fas', 'bars']" />
+  </div>
+  <transition name="mobile-nav">
+    <div v-show="mobileNav" class="dropdown-nav">
+      <router-link :to="{ name: 'Home'}">HOME</router-link>
+      <router-link :to="{ name: 'Projects'}">PROJECTS</router-link>
+      <router-link :to="{ name: 'Art'}">ART PORTFOLIO</router-link>
+      <router-link :to="{ name: 'About'}">ABOUT ME</router-link>
+    </div>
+  </transition>
 </template>
 
 <script>
 export default {
   name: "Navigation-Component",
-  components: {}
+  data() {
+    return {
+      scrolledNav: null,
+      mobile: null,
+      mobileNav: null,
+      windowWidth: null,
+    }
+  },
+  created() {
+    window.addEventListener('resize', this.checkScreenForMobile)
+    this.checkScreenForMobile()
+  },
+  watch: {
+    $route() {
+      this.mobileNav = false
+    }
+  },
+  methods: {
+    toggleMobileNav() {
+      this.mobileNav = !this.mobileNav
+    },
+    updateScroll() {
+      const scrollPosition = window.scrollY
+      if (scrollPosition > 50) {
+        this.scrolledNav = true
+        return
+      }
+      this.scrolledNav = false
+    },
+    checkScreenForMobile() {
+      this.windowWidth = window.innerWidth
+      if (this.windowWidth <= 875) {
+        this.mobile = true
+        return
+      }
+      this.mobile = false
+      this.mobileNav = false
+    }
+  }
 };
 </script>
 
@@ -18,69 +67,83 @@ export default {
 .navbar-links > a {
   margin: 0;
   text-decoration: none;
-  color: gainsboro;
+  color: var(--off-white);
   padding: 10px 16px;
   transition: color 0.3s ease;
 }
 
 .navbar-links a:hover {
-  color: turquoise;
+  color: var(--turquoise);
 }
 
 .navbar-links > .router-link-active,
 .navbar-links > .router-link-exact-active {
-  color: turquoise;
+  color: var(--turquoise);
 }
 
-/*@media (max-width: 770px) {
-  .toggle-button {
-    display: flex;
-  }
+.icon {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 24px;
+  height: 100%;
+}
 
-  .logo a {
-    color: var(--turquoise);
-  }
+.icon .sub-icon {
+  cursor: pointer;
+  font-size: 24px;
+}
 
-  .logo a span {
-    color: var(--off-white);
-  }
+.icon-active {
+  transform: rotate(180deg);
+  /* need to fix */
+  /* transition: all 0.1s ease-out; */
+}
 
-  .navbar-links {
-    display: none;
-    width: 100%;
-  }
+.dropdown-nav {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  width: 100%;
+  max-width: 250px;
+  padding-top: 25px;
+  height: 100%;
+  background-color: var(--gray);
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
 
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-    background: black;
-  }
+.dropdown-nav > a {
+  padding: 15px 30px;
+  color: var(--turquoise);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
 
-  .navbar-links ul {
-    width: 100%;
-    flex-direction: column;
-  }
+.dropdown-nav > a:hover {
+  padding: 15px 30px;
+  color: var(--off-white);
+  text-decoration: none;
+}
 
-  .navbar-links li {
-    text-align: center;
-  }
+.dropdown-nav > .router-link-active,
+.dropdown-nav > .router-link-exact-active {
+  color: var(--med-blue);
+}
 
-  .navbar-links li a {
-    padding: 0.5rem 1rem;
-    transition: color 0.3s ease;
-    color: var(--turquoise);
-  }
+.mobile-nav-enter-active,
+.mobile-nav-leave-active {
+  transition: 0.5s ease all;
+}
 
-  .navbar-links li a:hover {
-    color: var(--med-blue);
-  }
+.mobile-nav-enter-from,
+.mobile-nav-leave-to {
+  transform: translateX(-250px);
+}
 
-  .navbar-links.active {
-    display: flex;
-    position: absolute;
-    background: black;
-    margin-top: 50px;
-    transition: 0.3s;
-  }
-}*/
+.mobile-nav-enter-to {
+  transform: translateX(0);
+}
 </style>

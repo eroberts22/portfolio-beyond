@@ -24,11 +24,11 @@ export default {
 
 <style scoped>
 .card-title {
-  color: gainsboro;
+  color: var(--off-white);
 }
 
 .bg-gray {
-  background-color: darkgray;
+  background-color: var(--gray);
 }
 
 a {

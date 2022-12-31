@@ -92,7 +92,7 @@ export default {
   padding: 20px;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 950px) {
   .inner-wrap-half {
     width: 50%;
   }
@@ -111,7 +111,7 @@ export default {
 }
 
 .line-break {
-  border-top: 8px solid gainsboro;
+  border-top: 8px solid var(--off-white);
   border-radius: 5px;
 }
 </style>

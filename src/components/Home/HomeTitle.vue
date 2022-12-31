@@ -22,7 +22,7 @@ export default {
 
 .page-sub-title {
     text-align: left;
-    font-size: calc(1.0em + 0.5vmin);
+    font-size: calc(1.3em + 0.5vmin);
     font-weight: 400;
     padding-left: 20%;
     margin-bottom: 10px;
@@ -32,14 +32,14 @@ export default {
 .page-sub-title span,
 .page-sub-title a,
 .page-sub-title a:hover span  {
-    color: turquoise;
+    color: var(--turquoise);
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .page-sub-title a span,
 .page-sub-title a:hover {
-    color: gainsboro;
+    color: var(--off-white);
     transition: color 0.3s ease;
 }
 
