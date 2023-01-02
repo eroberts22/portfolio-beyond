@@ -1,11 +1,11 @@
 <template>
-  <div class="card text-white bg-gray mb-3 text-center">
+  <div class="card text-white bg-gray mb-3 h-100 text-center">
     <div class="card-body">
       <router-link :to="`${homeTile.routePath}`">
         <h2 class="card-title">{{ homeTile.text }}</h2>
         <img
           class="card-img-top"
-          :src="require('@/assets/icons/' + homeTile.imgName)"
+          :src="require('@/assets/' + homeTile.imgName)"
           alt="about-link"
         />
       </router-link>

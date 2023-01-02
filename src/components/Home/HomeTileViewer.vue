@@ -21,17 +21,17 @@ export default {
       cards: [
         {
           text: "Projects",
-          imgName: "devproj.png",
+          imgName: "icons/devproj.png",
           routePath: "/projects",
         },
         {
           text: "Art",
-          imgName: "devart.png",
+          imgName: "icons/devart.png",
           routePath: "/art",
         },
         {
           text: "About",
-          imgName: "devabt.png",
+          imgName: "icons/devabt.png",
           routePath: "/about",
         },
       ],
