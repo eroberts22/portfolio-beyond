@@ -1,25 +1,26 @@
 <template>
-  <div class="page-title">Welcome to Portfolio Beyond<span>.</span></div>
+  <PageTitle :titleText="text" :spanContent="span"/>
   <div class="page-sub-title">My name is <router-link :to="{ name: 'About'}">Liz Roberts<span>.</span></router-link></div>
 </template>
 
 <script>
+import PageTitle from '../PageTitle.vue'
+
 export default {
   name: 'HomeTitle',
+  components: {
+    PageTitle
+  },
+  data() {
+    return {
+      text: 'Welcome to Portfolio Beyond',
+      span: '.'
+    }
+  }
 }
 </script>
 
 <style scoped>
-.page-title {
-    text-align: left;
-    font-size: calc(2.0em + 1.0vmin);
-    font-weight: 500;
-    margin-top: 25px;
-    margin-bottom: 10px;
-    padding-left: 20%;
-    padding-right: 20%;
-}
-
 .page-sub-title {
     text-align: left;
     font-size: calc(1.3em + 0.5vmin);
@@ -28,7 +29,6 @@ export default {
     margin-bottom: 10px;
 }
 
-.page-title span,
 .page-sub-title span,
 .page-sub-title a,
 .page-sub-title a:hover span  {
@@ -41,12 +41,5 @@ export default {
 .page-sub-title a:hover {
     color: var(--off-white);
     transition: color 0.3s ease;
-}
-
-@media (max-width:992px) {
-    .page-title {
-       padding-left: 10%;
-       padding-right: 10%;
-    }
 }
 </style>
