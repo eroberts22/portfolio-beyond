@@ -31,6 +31,20 @@ export default {
   background-color: var(--gray);
 }
 
+.card {
+    -o-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.card:hover {
+  -webkit-box-shadow: inset 0px 0px 0px 10px var(--opaque-purple);
+  -moz-box-shadow: inset 0px 0px 0px 10px var(--opaque-purple);
+  box-shadow: inset 0px 0px 0px 10px var(--opaque-purple);
+}
+
 a {
   text-decoration: none;
 }
