@@ -37,16 +37,16 @@ export default {
 <style>
 .scroll-up-btn {
     position: fixed;
-    height: 42px;
-    width: 42px;
+    height: 40px;
+    width: 40px;
     background: var(--med-blue);
-    right: 20px;
-    bottom: 20px;
+    right: 18px;
+    bottom: 18px;
     text-align: center;
-    line-height: 45px;
+    line-height: 42px;
     color: var(--off-white);
     z-index: 9999;
-    font-size: 30px;
+    font-size: 25px;
     border-radius: 8px;
     border-bottom-width: 2px;
     cursor: pointer;
