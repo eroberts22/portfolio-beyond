@@ -23,7 +23,6 @@ export default {
   name: "Navigation-Component",
   data() {
     return {
-      scrolledNav: null,
       mobile: null,
       mobileNav: null,
       windowWidth: null,
@@ -38,17 +37,12 @@ export default {
       this.mobileNav = false
     }
   },
+  unmounted() {
+    window.removeEventListener('resize', this.checkScreenForMobile)
+  },
   methods: {
     toggleMobileNav() {
       this.mobileNav = !this.mobileNav
-    },
-    updateScroll() {
-      const scrollPosition = window.scrollY
-      if (scrollPosition > 50) {
-        this.scrolledNav = true
-        return
-      }
-      this.scrolledNav = false
     },
     checkScreenForMobile() {
       this.windowWidth = window.innerWidth
@@ -97,7 +91,7 @@ export default {
 
 .icon-active {
   transform: rotate(180deg);
-  /* need to fix */
+  /* TODO */
   /* transition: all 0.1s ease-out; */
 }
 

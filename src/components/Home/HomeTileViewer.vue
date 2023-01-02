@@ -2,19 +2,19 @@
   <div class="central-box">
     <div class="row">
       <div class="col-lg-4 col-sm-12" :key="card.text" v-for="card in cards">
-        <HomeTile :homeTile="card" />
+        <Tile :homeTile="card" />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import HomeTile from "./HomeTile.vue";
+import Tile from "../Tile.vue";
 
 export default {
   name: "HomeTileViewer",
   components: {
-    HomeTile,
+    Tile,
   },
   data() {
     return {
