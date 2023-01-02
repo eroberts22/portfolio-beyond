@@ -107,6 +107,7 @@ export default {
   top: 0;
   left: 0;
   z-index: 999;
+  box-shadow: 0 0 10px var(--opaque-black)
 }
 
 .dropdown-nav > a {

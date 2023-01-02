@@ -1,5 +1,5 @@
 <template>
-  <PageTitle :titleText="text" :spanContent="span"/>
+  <PageTitle :Title="title" />
   <div class="central-box">
     <div style="width: 100%">
       <div class="inner-wrap-twothird">
@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import PageTitle from "../components/PageTitle.vue"
+import PageTitle from "../components/PageTitle.vue";
 import CommentTextBox from "../components/CommentTextBox.vue";
 import LogoLink from "../components/About/LogoLink.vue";
 
@@ -38,8 +38,10 @@ export default {
   },
   data() {
     return {
-      text: "Hello There",
-      span: "!",
+      title: {
+        text: "Hello There",
+        span: "!",
+      },
       AboutMe: {
         title: "About Me",
         textCollection: [

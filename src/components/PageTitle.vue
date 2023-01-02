@@ -1,6 +1,6 @@
 <template>
   <div class="page-title">
-    {{ titleText }}<span>{{ spanContent }}</span>
+    {{ Title.text }}<span>{{ Title.span }}</span>
   </div>
 </template>
 
@@ -8,8 +8,7 @@
 export default {
   name: "HomeTitle",
   props: {
-    titleText: String,
-    spanContent: String,
+    Title: Object
   },
 };
 </script>

@@ -5,7 +5,7 @@
   /* --light-blue: rgb(76, 170, 247); */
   --med-blue: rgb(90, 104, 211);
   --turquoise: rgb(33, 179, 220);
-  /* --opaque-black: rgba(0, 0, 0, 0.625); */
+  --opaque-black: rgba(0, 0, 0, 0.625);
   --opaque-purple: rgba(106, 71, 185, 0.5);
   --gray: rgb(35, 44, 63);
 }

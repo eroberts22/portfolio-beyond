@@ -5,8 +5,8 @@
         <h2 class="card-title">{{ homeTile.text }}</h2>
         <img
           class="card-img-top"
-          :src="require('@/assets/' + homeTile.imgName)"
-          alt="about-link"
+          :src="require('@/assets/' + homeTile.src)"
+          :alt="format(homeTile.text)"
         />
       </router-link>
     </div>
@@ -19,6 +19,11 @@ export default {
   props: {
     homeTile: Object,
   },
+  methods: {
+    format(text) {
+      return text.toLowerCase().trim().replace(' ', '-')
+    }
+  }
 };
 </script>
 
