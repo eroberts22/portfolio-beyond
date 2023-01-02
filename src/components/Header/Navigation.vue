@@ -80,7 +80,7 @@ export default {
   align-items: center;
   position: absolute;
   top: 0;
-  right: 24px;
+  right: 20px;
   height: 100%;
 }
 

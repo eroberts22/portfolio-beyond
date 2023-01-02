@@ -16,7 +16,9 @@
   <div id="space-explorer">
     <SpaceExplorer />
   </div>
-  <div id="haunted-apothecary"></div>
+  <div id="haunted-apothecary">
+    <HauntedApothecary />
+  </div>
   <div id="other-art"></div>
 </template>
 
@@ -25,6 +27,7 @@ import ScrollUpButton from "../components/ScrollUpButton.vue";
 import PageTitle from "../components/PageTitle.vue";
 import Tile from "../components/Tile.vue";
 import SpaceExplorer from "../components/Art/SpaceExplorer.vue"
+import HauntedApothecary from "../components/Art/HauntedApothecary.vue"
 
 export default {
   name: "ArtView",
@@ -32,7 +35,8 @@ export default {
     ScrollUpButton,
     PageTitle,
     Tile,
-    SpaceExplorer
+    SpaceExplorer,
+    HauntedApothecary
   },
   data() {
     return {

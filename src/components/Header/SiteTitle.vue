@@ -16,7 +16,7 @@ export default {
   margin: 0;
   text-decoration: none;
   color: var(--off-white);
-  padding: 10px 16px;
+  padding: 0 10px;
   transition: color 0.3s ease;
   font-weight: 500;
   font-family: "Poppins";
@@ -26,6 +26,7 @@ export default {
   /* font-size: calc(1.8em + 1vmin); */
   font-size: calc(1.5em + 1.5vmin);
   margin: 0.5rem 1.5rem;
+  display: flex;
 }
 
 .logo a span {
