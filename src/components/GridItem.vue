@@ -60,5 +60,6 @@ export default {
   -webkit-flex-shrink: 0;
   max-width: 100%;
   max-height: 100%;
+  padding: 10px;
 }
 </style>

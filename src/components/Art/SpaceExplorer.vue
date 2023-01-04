@@ -1,13 +1,9 @@
 <template>
   <PageTitle :Title="title" />
   <div class="album-grid">
-    <div :key="image.title" v-for="image in imagesInGrid">
-      <GridItem :image="image" />
-    </div>
+    <GridItem :image="image" :key="image.title" v-for="image in imagesInGrid"></GridItem>
   </div>
-  <div :key="image.title" v-for="image in imagesOutsideGrid">
-    <GridItem :image="image" />
-  </div>
+  <GridItem :image="image"  :key="image.title" v-for="image in imagesOutsideGrid"></GridItem>
 </template>
 
 <script>

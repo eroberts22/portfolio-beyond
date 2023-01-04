@@ -30,7 +30,6 @@ export default {
 }
 
 .small-logo:hover {
-  opacity: 0.7;
-  color: var(--med-blue);
+  color: var(--transparent-med-blue);
 }
 </style>

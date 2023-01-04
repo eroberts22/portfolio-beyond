@@ -1,33 +1,65 @@
 <template>
   <ScrollUpButton />
   <PageTitle :Title="title" />
-  <div class="central-box">
+  <!-- <div class="central-box">
     <div class="row py-2">
       <div
-        class="col-lg-4 col-sm-12 py-2"
+        class="col-lg-6 col-md-12 py-2"
         :key="card.text"
         v-for="card in cards"
       >
         <Tile :homeTile="card" />
       </div>
     </div>
+  </div> -->
+
+  <div class="central-box">
+    <div class="row py-2">
+      <div class="col-xl-6 col-md-12 py-2">
+        <h2>Game Assets</h2>
+        <div class="row py-2">
+          <div
+            class="col-lg-6 col-md-6 py-2"
+            :key="card.text"
+            v-for="card in cards[0]"
+          >
+            <Tile :homeTile="card" />
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-6 col-md-12 py-2">
+        <h2>Other Art</h2>
+        <div class="row py-2">
+          <div
+            class="col-lg-6 col-md-6 py-2"
+            :key="card.text"
+            v-for="card in cards[1]"
+          >
+            <Tile :homeTile="card" />
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div id="space-explorer">
-    <SpaceExplorer />
-  </div>
-  <div id="haunted-apothecary">
-    <HauntedApothecary />
-  </div>
-  <div id="other-art"></div>
+  <hr class="line-break" />
+  <div id="space-explorer"><SpaceExplorer /></div>
+  <hr class="line-break" />
+  <div id="haunted-apothecary"><HauntedApothecary /></div>
+  <hr class="line-break" />
+  <div id="digital-art"><DigitalArt /></div>
+  <hr class="line-break" />
+  <div id="fine-art"><FineArt /></div>
 </template>
 
 <script>
 import ScrollUpButton from "../components/ScrollUpButton.vue";
 import PageTitle from "../components/PageTitle.vue";
 import Tile from "../components/Tile.vue";
-import SpaceExplorer from "../components/Art/SpaceExplorer.vue"
-import HauntedApothecary from "../components/Art/HauntedApothecary.vue"
+import SpaceExplorer from "../components/Art/SpaceExplorer.vue";
+import HauntedApothecary from "../components/Art/HauntedApothecary.vue";
+import DigitalArt from "../components/Art/DigitalArt.vue";
+import FineArt from "../components/Art/FineArt.vue";
 
 export default {
   name: "ArtView",
@@ -36,7 +68,9 @@ export default {
     PageTitle,
     Tile,
     SpaceExplorer,
-    HauntedApothecary
+    HauntedApothecary,
+    DigitalArt,
+    FineArt,
   },
   data() {
     return {
@@ -45,31 +79,44 @@ export default {
         span: ".",
       },
       cards: [
-        {
-          text: "Space Explorer",
-          src: "space-explorer.png",
-          routePath: "/art#space-explorer",
-        },
-        {
-          text: "Haunted Apothecary",
-          src: "apothecary/shadow.png",
-          routePath: "/art#haunted-apothecary",
-        },
-        {
-          text: "Other Art",
-          src: "icons/cloud.png",
-          routePath: "/art#other-art",
-        },
+        [
+          {
+            text: "Space Explorer",
+            src: "space-explorer.png",
+            routePath: "/art#space-explorer",
+          },
+          {
+            text: "Haunted Apothecary",
+            src: "apothecary/shadow.png",
+            routePath: "/art#haunted-apothecary",
+          },
+        ],
+        [
+          {
+            text: "Digital Art",
+            src: "icons/cloud.png",
+            routePath: "/art#digital-art",
+          },
+          {
+            text: "Fine Art",
+            src: "coffee-script/coffeecup.png",
+            routePath: "/art#fine-art",
+          },
+        ],
       ],
     };
   },
 };
 </script>
 
-<style>
-.album-grid {
-  margin: 2% auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+<style scoped>
+h2 {
+  text-align: center;
+  font-family: "Poppins";
+  color: var(--med-blue);
+}
+
+.line-break {
+  border-top: 15px solid var(--off-white);
 }
 </style>

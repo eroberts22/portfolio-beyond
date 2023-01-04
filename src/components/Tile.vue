@@ -30,6 +30,7 @@ export default {
 <style scoped>
 .card-title {
   color: var(--off-white);
+  font-size: calc(1.2em + 1.0vmin);
 }
 
 .bg-gray {
@@ -45,9 +46,9 @@ export default {
 }
 
 .card:hover {
-  -webkit-box-shadow: inset 0px 0px 0px 10px var(--opaque-purple);
-  -moz-box-shadow: inset 0px 0px 0px 10px var(--opaque-purple);
-  box-shadow: inset 0px 0px 0px 10px var(--opaque-purple);
+  -webkit-box-shadow: inset 0px 0px 0px 10px var(--transparent-med-blue);
+  -moz-box-shadow: inset 0px 0px 0px 10px var(--transparent-med-blue);
+  box-shadow: inset 0px 0px 0px 10px var(--transparent-med-blue);
 }
 
 a {

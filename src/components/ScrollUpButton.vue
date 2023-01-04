@@ -40,14 +40,14 @@ export default {
     height: 40px;
     width: 40px;
     background: var(--med-blue);
-    right: 18px;
-    bottom: 18px;
+    right: 20px;
+    bottom: 20px;
     text-align: center;
     line-height: 42px;
     color: var(--off-white);
     z-index: 9999;
     font-size: 25px;
-    border-radius: 8px;
+    border-radius: 10px;
     border-bottom-width: 2px;
     cursor: pointer;
     opacity: 0;

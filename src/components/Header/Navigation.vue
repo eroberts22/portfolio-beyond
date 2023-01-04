@@ -107,7 +107,7 @@ export default {
   top: 0;
   left: 0;
   z-index: 999;
-  box-shadow: 0 0 10px var(--opaque-black)
+  box-shadow: 0 0 10px var(--transparent-black)
 }
 
 .dropdown-nav > a {
@@ -125,7 +125,7 @@ export default {
 
 .dropdown-nav > .router-link-active,
 .dropdown-nav > .router-link-exact-active {
-  color: var(--med-blue);
+  color: var(--off-white);
 }
 
 .mobile-nav-enter-active,

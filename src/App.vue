@@ -42,4 +42,10 @@ body {
   margin-bottom: 5%;
   padding: 2%;
 }
+
+.album-grid {
+  margin: 2% auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
 </style>
