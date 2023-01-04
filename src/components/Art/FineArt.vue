@@ -116,6 +116,10 @@ export default {
           src: "art-portfolio/physical/oil-far-sky.jpg",
         },
         {
+          title: "Holly",
+          src: "art-portfolio/physical/holly.jpg",
+        },
+        {
           title: "Deep Space",
           src: "art-portfolio/physical/watercolor-space.jpg",
         },
