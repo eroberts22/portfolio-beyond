@@ -23,7 +23,6 @@ export default {
 }
 
 .logo {
-  /* font-size: calc(1.8em + 1vmin); */
   font-size: calc(1.5em + 1.5vmin);
   margin: 0.5rem 1.5rem;
   display: flex;

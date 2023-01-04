@@ -18,7 +18,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .small-logo {
   width: 50px;
   text-decoration: none;

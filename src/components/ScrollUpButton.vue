@@ -34,7 +34,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .scroll-up-btn {
     position: fixed;
     height: 40px;
