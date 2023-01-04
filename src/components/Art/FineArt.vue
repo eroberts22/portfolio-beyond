@@ -1,16 +1,46 @@
 <template>
-  <PageTitle :Title="title"/>
+  <PageTitle :Title="title" />
   <div class="album-grid">
-     <GridItem :image="image" :key="image.title" v-for="image in imagesColorful"></GridItem>
+    <GridItem
+      :image="image"
+      :key="image.title"
+      v-for="image in imagesColorful"
+    ></GridItem>
   </div>
   <div class="album-grid">
-     <GridItem :image="image" :key="image.title" v-for="image in imagesShapes"></GridItem>
+    <GridItem
+      :image="image"
+      :key="image.title"
+      v-for="image in imagesCreaturesAndCharacters"
+    ></GridItem>
   </div>
   <div class="album-grid">
-     <GridItem :image="image" :key="image.title" v-for="image in imagesSketch"></GridItem>
+    <GridItem
+      :image="image"
+      :key="image.title"
+      v-for="image in imagesStillLife"
+    ></GridItem>
   </div>
   <div class="album-grid">
-     <GridItem :image="image" :key="image.title" v-for="image in imagesSketchCloud"></GridItem>
+    <GridItem
+      :image="image"
+      :key="image.title"
+      v-for="image in imagesShapes"
+    ></GridItem>
+  </div>
+  <div class="album-grid">
+    <GridItem
+      :image="image"
+      :key="image.title"
+      v-for="image in imagesSketch"
+    ></GridItem>
+  </div>
+  <div class="album-grid">
+    <GridItem
+      :image="image"
+      :key="image.title"
+      v-for="image in imagesSketchCloud"
+    ></GridItem>
   </div>
 </template>
 
@@ -28,9 +58,13 @@ export default {
     return {
       title: {
         text: "Fine Art",
-        span: "."
+        span: ".",
       },
       imagesSketch: [
+        // {
+        //   title: "Jolyne Cujoh",
+        //   src: "art-portfolio/physical/jolyne-cujoh.jpg",
+        // },
         {
           title: "Sketch - Woman I",
           src: "art-portfolio/physical/sketch-fallout.jpg",
@@ -53,7 +87,7 @@ export default {
         },
       ],
       imagesSketchCloud: [
-       {
+        {
           title: "Sketch - Fiery Clouds",
           src: "art-portfolio/physical/sketch-fire-clouds.jpg",
         },
@@ -68,28 +102,48 @@ export default {
           src: "art-portfolio/physical/circles.jpg",
         },
         {
-          title: "Roadways",
+          title: "Bridges & Tunnels",
           src: "art-portfolio/physical/roadways.jpg",
         },
       ],
       imagesColorful: [
         {
-          title: "Far Sky",
-          src: "art-portfolio/physical/oil-far-sky.jpg",
-        },
-        {
           title: "Pale Forest",
           src: "art-portfolio/physical/pale-forest.jpg",
         },
         {
-          title: "Not So Lonely House",
-          src: "art-portfolio/physical/watercolor-hello-house.jpg",
+          title: "Far Sky",
+          src: "art-portfolio/physical/oil-far-sky.jpg",
         },
         {
           title: "Deep Space",
           src: "art-portfolio/physical/watercolor-space.jpg",
         },
-      ]
+      ],
+      imagesStillLife: [
+        {
+          title: "Evening",
+          src: "art-portfolio/physical/living-room.jpg",
+        },
+        {
+          title: "Still Life",
+          src: "art-portfolio/physical/still-life.jpg",
+        },
+      ],
+      imagesCreaturesAndCharacters: [
+        {
+          title: "Lonely House",
+          src: "art-portfolio/physical/watercolor-hello-house.jpg",
+        },
+        {
+          title: "We Have Visitors",
+          src: "art-portfolio/physical/forest-spirits.jpg",
+        },
+        {
+          title: "Reimi Sugimoto",
+          src: "art-portfolio/physical/reimi-sugimoto.jpg",
+        },
+      ],
     };
   },
 };

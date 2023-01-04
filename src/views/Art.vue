@@ -1,18 +1,6 @@
 <template>
   <ScrollUpButton />
   <PageTitle :Title="title" />
-  <!-- <div class="central-box">
-    <div class="row py-2">
-      <div
-        class="col-lg-6 col-md-12 py-2"
-        :key="card.text"
-        v-for="card in cards"
-      >
-        <Tile :homeTile="card" />
-      </div>
-    </div>
-  </div> -->
-
   <div class="central-box">
     <div class="row py-2">
       <div class="col-xl-6 col-md-12 py-2">
