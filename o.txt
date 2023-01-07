@@ -1,0 +1,32 @@
+1. space explorer
+  - paragraph
+  - Assets
+  - demo
+2. Haunted apothecary
+  - paragraph
+  - Assets
+  - demo
+3. coffee maker script
+  - description
+  - link
+4. Schedular dispatch sim
+  - description
+  - charts
+  - link
+5. 3D asteroids
+  - external website
+6. portfolio beyond
+  - this website
+  - paragraph
+7. farm simulation
+  - external website
+8. mem manager
+  - lab 6
+
+Deer boy - digital art
+jojo - physical art
+dragoon - physical or digital art
+space dandy - physical art
+kenway - physical art
+
+create art for schedular dispatch sim, memory manager lib, and fine art

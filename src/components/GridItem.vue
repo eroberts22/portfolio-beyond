@@ -94,7 +94,7 @@ export default {
   left: 0;
   right: 0;
   background: var(--transparent-black);
-  color: #fff;
+  color: var(--off-white);
   visibility: hidden;
   opacity: 0;
   display: flex;

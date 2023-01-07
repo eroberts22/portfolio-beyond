@@ -35,17 +35,17 @@
   <hr class="line-break" />
   <div id="haunted-apothecary"><HauntedApothecary /></div>
   <hr class="line-break" />
-  <div id="digital-art"><DigitalArt /></div>
-  <hr class="line-break" />
   <div id="fine-art"><FineArt /></div>
+  <hr class="line-break" />
+  <div id="digital-art"><DigitalArt /></div>
 </template>
 
 <script>
 import ScrollUpButton from "../components/ScrollUpButton.vue";
 import PageTitle from "../components/PageTitle.vue";
 import Tile from "../components/Tile.vue";
-import SpaceExplorer from "../components/Art/SpaceExplorer.vue";
-import HauntedApothecary from "../components/Art/HauntedApothecary.vue";
+import SpaceExplorer from "../components/Art/SpaceExplorerArt.vue";
+import HauntedApothecary from "../components/Art/HauntedApothecaryArt.vue";
 import DigitalArt from "../components/Art/DigitalArt.vue";
 import FineArt from "../components/Art/FineArt.vue";
 
@@ -81,14 +81,14 @@ export default {
         ],
         [
           {
-            text: "Digital Art",
-            src: "icons/cloud.png",
-            routePath: "/art#digital-art",
-          },
-          {
             text: "Fine Art",
             src: "coffee-script/coffeecup.png",
             routePath: "/art#fine-art",
+          },
+          {
+            text: "Digital Art",
+            src: "icons/cloud.png",
+            routePath: "/art#digital-art",
           },
         ],
       ],

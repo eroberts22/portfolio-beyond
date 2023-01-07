@@ -1,30 +1,53 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Home from '../views/Home'
-import Projects from '../views/Projects'
-import Art from '../views/Art'
-import About from '../views/About'
+
+function lazyLoad(view) {
+  return () => import(`@/views/${view}.vue`)
+}
 
 const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home,
+    component: lazyLoad('Home'),
   },
   {
     path: '/projects',
     name: 'Projects',
-    component: Projects,
+    component: lazyLoad('Projects'),
   },
   {
     path: '/art',
     name: 'Art',
-    component: Art,
+    component: lazyLoad('Art'),
   },
   {
     path: '/about',
     name: 'About',
-    component: About,
+    component: lazyLoad('About'),
   },
+  {
+    path: '/space-explorer',
+    name: 'SpaceExplorer',
+    component: lazyLoad('projects/SpaceExplorer')
+  },
+
+  //https://stackoverflow.com/questions/50633001/vuejs-vue-router-linking-an-external-website
+
+  {
+    path: '/haunted-apothecary',
+    name: 'HauntedApothecary',
+    component: lazyLoad('projects/HauntedApothecary')
+  },
+  {
+    path: '/asteroids',
+    name: 'Asteroids3D',
+    component: lazyLoad('projects/Asteroids3D')
+  },
+  {
+    path: '/portfolio-beyond',
+    name: 'PortfolioBeyond',
+    component: lazyLoad('projects/PortfolioBeyond')
+  }
 ]
 
 const router = createRouter({
@@ -36,9 +59,9 @@ const router = createRouter({
       return savedPosition
     }
     if (to.hash) {
-      return {el: to.hash}
+      return { el: to.hash }
     }
-    return { x: 0, y: 0}
+    return { x: 0, y: 0 }
   }
 })
 

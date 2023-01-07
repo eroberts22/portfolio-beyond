@@ -1,19 +1,25 @@
 <template>
-    <div v-show="!mobile" class="navbar-links">
-    <router-link :to="{ name: 'Home'}">HOME</router-link>
-    <router-link :to="{ name: 'Projects'}">PROJECTS</router-link>
-    <router-link :to="{ name: 'Art'}">ART PORTFOLIO</router-link>
-    <router-link :to="{ name: 'About'}">ABOUT ME</router-link>
+  <div v-show="!mobile" class="navbar-links">
+    <router-link :to="{ name: 'Home' }">HOME</router-link>
+    <router-link :to="{ name: 'Projects' }">PROJECTS</router-link>
+    <router-link :to="{ name: 'Art' }">ART PORTFOLIO</router-link>
+    <router-link :to="{ name: 'About' }">ABOUT ME</router-link>
   </div>
   <div class="icon">
-    <font-awesome-icon class="sub-icon" @click="toggleMobileNav" v-show="mobile" :class="{ 'icon-active': mobileNav }" :icon="['fas', 'bars']" />
+    <font-awesome-icon
+      class="sub-icon"
+      @click="toggleMobileNav"
+      v-show="mobile"
+      :class="{ 'icon-active': mobileNav }"
+      :icon="['fas', navIcon]"
+    />
   </div>
   <transition name="mobile-nav">
     <div v-show="mobileNav" class="dropdown-nav">
-      <router-link :to="{ name: 'Home'}">HOME</router-link>
-      <router-link :to="{ name: 'Projects'}">PROJECTS</router-link>
-      <router-link :to="{ name: 'Art'}">ART PORTFOLIO</router-link>
-      <router-link :to="{ name: 'About'}">ABOUT ME</router-link>
+      <router-link :to="{ name: 'Home' }">HOME</router-link>
+      <router-link :to="{ name: 'Projects' }">PROJECTS</router-link>
+      <router-link :to="{ name: 'Art' }">ART PORTFOLIO</router-link>
+      <router-link :to="{ name: 'About' }">ABOUT ME</router-link>
     </div>
   </transition>
 </template>
@@ -26,34 +32,40 @@ export default {
       mobile: null,
       mobileNav: null,
       windowWidth: null,
+    };
+  },
+  computed: {
+    navIcon() {
+    if (this.mobileNav) return 'times'
+    return 'bars'
     }
   },
   created() {
-    window.addEventListener('resize', this.checkScreenForMobile)
-    this.checkScreenForMobile()
+    window.addEventListener("resize", this.checkScreenForMobile);
+    this.checkScreenForMobile();
   },
   watch: {
     $route() {
-      this.mobileNav = false
-    }
+      this.mobileNav = false;
+    },
   },
   unmounted() {
-    window.removeEventListener('resize', this.checkScreenForMobile)
+    window.removeEventListener("resize", this.checkScreenForMobile);
   },
   methods: {
     toggleMobileNav() {
-      this.mobileNav = !this.mobileNav
+      this.mobileNav = !this.mobileNav;
     },
     checkScreenForMobile() {
-      this.windowWidth = window.innerWidth
+      this.windowWidth = window.innerWidth;
       if (this.windowWidth <= 875) {
-        this.mobile = true
-        return
+        this.mobile = true;
+        return;
       }
-      this.mobile = false
-      this.mobileNav = false
-    }
-  }
+      this.mobile = false;
+      this.mobileNav = false;
+    },
+  },
 };
 </script>
 
@@ -86,13 +98,11 @@ export default {
 
 .icon .sub-icon {
   cursor: pointer;
-  font-size: 24px;
+  font-size: 32px;
 }
 
 .icon-active {
-  transform: rotate(180deg);
-  /* TODO */
-  /* transition: all 0.1s ease-out; */
+  color: var(--med-blue);
 }
 
 .dropdown-nav {
@@ -107,7 +117,7 @@ export default {
   top: 0;
   left: 0;
   z-index: 999;
-  box-shadow: 0 0 10px var(--transparent-black)
+  box-shadow: 0 0 10px var(--transparent-black);
 }
 
 .dropdown-nav > a {
