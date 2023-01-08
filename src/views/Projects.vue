@@ -48,21 +48,25 @@ export default {
             text: "Space Explorer",
             src: "space-explorer.png",
             routePath: "/space-explorer",
+            description: "A Javascript Game"
           },
           {
             text: "Haunted Apothecary",
             src: "apothecary/shadow.png",
             routePath: "/haunted-apothecary",
+            description: "A Java Game"
           },
           {
             text: "3D Asteroids",
-            src: "space-explorer/asteroid1.png",
+            src: "space-explorer/asteroid2.png",
             routePath: "/asteroids",
+            description: "C++/OpenGL 3D Game"
           },
           {
             text: "Portfolio Beyond",
             src: "icons/cloudfav.png",
             routePath: "/portfolio-beyond",
+            description: "This Website"
           },
         ],
         [
@@ -70,21 +74,25 @@ export default {
             text: "Schedular Dispatch Sim",
             src: "icons/microchip-solid.svg",
             routePath: "/",
+            description: "CPU Dispatch Scheduling Model"
           },
           {
-            text: "Memory Manager Library",
+            text: "Memory Manager",
             src: "icons/memory-solid.svg",
             routePath: "/",
+            description: "Memory-Related Error Handling Library"
           },
           {
             text: "Coffee Script",
             src: "coffee-script/coffeecup.png",
             routePath: "/",
+            description: "Scanner and Parser"
           },
           {
             text: "Farm Simulation",
             src: "flower.png",
             routePath: "/",
+            description: "A C++ Command Prompt Game"
           },
         ],
       ],

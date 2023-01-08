@@ -8,6 +8,7 @@
           :src="require('@/assets/' + homeTile.src)"
           :alt="format(homeTile.text)"
         />
+        <p v-if="homeTile.description">{{ homeTile.description }}</p>
       </router-link>
     </div>
   </div>
@@ -53,5 +54,11 @@ export default {
 
 a {
   text-decoration: none;
+}
+
+p {
+  font-family: "Poppins";
+  color: var(--off-white);
+  font-size: calc(0.75em + 1vmin);
 }
 </style>
