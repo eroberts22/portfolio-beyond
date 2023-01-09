@@ -8,7 +8,10 @@
           :src="require('@/assets/' + homeTile.src)"
           :alt="format(homeTile.text)"
         />
-        <p v-if="homeTile.description">{{ homeTile.description }}</p>
+        <div v-if="homeTile.description" class="description-content">
+          <div class="spacer"></div>
+          <p>{{ homeTile.description }}</p>
+        </div>
       </router-link>
     </div>
   </div>
@@ -39,11 +42,11 @@ export default {
 }
 
 .card {
-    -o-transition: 0.3s;
-    -ms-transition: 0.3s;
-    -moz-transition: 0.3s;
-    -webkit-transition: 0.3s;
-    transition: 0.3s;
+  -o-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .card:hover {
@@ -56,9 +59,23 @@ a {
   text-decoration: none;
 }
 
+.description-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 p {
   font-family: "Poppins";
   color: var(--off-white);
   font-size: calc(0.75em + 1vmin);
+  padding: 10px;
+  margin: 0;
+  bottom: 1rem;
+  position: absolute;
+}
+
+.spacer {
+  height: 5rem; 
 }
 </style>

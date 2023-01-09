@@ -30,3 +30,7 @@ space dandy - physical art
 kenway - physical art
 
 create art for schedular dispatch sim, memory manager lib, and fine art
+
+#132C91 blue
+#21B3DC turquoise
+#6A47B9 purpleh

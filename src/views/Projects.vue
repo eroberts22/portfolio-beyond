@@ -80,7 +80,7 @@ export default {
             text: "Memory Manager",
             src: "icons/memory-solid.svg",
             routePath: "/",
-            description: "Memory-Related Error Handling Library"
+            description: "Memory Error Handling Library"
           },
           {
             text: "Coffee Script",
