@@ -1,15 +1,15 @@
 <template>
-  <Header/>
-  <router-view/>
+  <Header />
+  <router-view />
 </template>
 
 <script>
-import Header from './components/Header/Header.vue'
+import Header from "./components/Header/Header.vue";
 
 export default {
   name: "App",
   components: {
-    Header
+    Header,
   },
 };
 </script>
@@ -21,7 +21,7 @@ body {
   margin: 0;
   padding: 0;
   border: 0;
-  font-family: 'Ubuntu';
+  font-family: "Ubuntu";
 }
 
 .central-box {
@@ -36,7 +36,7 @@ body {
   font-family: "Ubuntu";
   max-width: 85%;
   margin: auto;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
   border-radius: 6px;
   margin-top: 2%;
   margin-bottom: 5%;
@@ -44,7 +44,7 @@ body {
 }
 
 p {
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-size: calc(0.75em + 1vmin);
 }
 
@@ -59,17 +59,42 @@ p a:hover {
 }
 
 p img {
-    max-width: 50%;
-    float: right;
+  max-width: 50%;
+  float: right;
 }
 
 p span {
-    color: var(--turquoise);
+  color: var(--turquoise);
 }
 
 .album-grid {
   margin: 2% auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.inner-wrap-half {
+  float: left;
+  width: 100%;
+}
+
+.img-wrap {
+  width: 100%;
+  padding: 20px;
+}
+
+@media (min-width: 950px) {
+  .inner-wrap-half {
+    width: 50%;
+  }
+
+  .img-wrap {
+    padding: 10px;
+  }
+}
+
+.line-break {
+  border-top: 8px solid var(--off-white);
+  border-radius: 5px;
 }
 </style>

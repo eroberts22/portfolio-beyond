@@ -19,10 +19,10 @@
           :alt="title.text"
           class="img-wrap"
         />
-        <a
+        <router-link
           class="btn btn-outline-light"
-          href="/"
-          >Demo</a
+          :to="{name: 'SpaceExplorerGame'}"
+          >Demo</router-link
         >
         <p>{{ info[2] }}</p>
       </div>
@@ -57,26 +57,6 @@ export default {
 </script>
 
 <style scoped>
-.inner-wrap-half {
-  float: left;
-  width: 100%;
-}
-
-.img-wrap {
-  width: 100%;
-  padding: 20px;
-}
-
-@media (min-width: 950px) {
-  .inner-wrap-half {
-    width: 50%;
-  }
-
-  .img-wrap {
-    padding: 10px;
-  }
-}
-
 .btn {
   font-family: "Poppins";
   font-size: calc(1em + 1vmin);

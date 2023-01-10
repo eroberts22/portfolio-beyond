@@ -83,8 +83,7 @@ export default {
 
 <style scoped>
 .inner-wrap-third,
-.inner-wrap-twothird,
-.inner-wrap-half {
+.inner-wrap-twothird {
   float: left;
   width: 100%;
 }
@@ -94,15 +93,7 @@ export default {
   width: 50%;
 }
 
-.img-wrap {
-  width: 100%;
-  padding: 20px;
-}
-
 @media (min-width: 950px) {
-  .inner-wrap-half {
-    width: 50%;
-  }
 
   .inner-wrap-twothird {
     width: 66%;
@@ -111,14 +102,5 @@ export default {
   .inner-wrap-third {
     width: 33%;
   }
-
-  .img-wrap {
-    padding: 10px;
-  }
-}
-
-.line-break {
-  border-top: 8px solid var(--off-white);
-  border-radius: 5px;
 }
 </style>
