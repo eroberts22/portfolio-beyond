@@ -43,6 +43,30 @@ body {
   padding: 2%;
 }
 
+p {
+  font-family: 'Poppins';
+  font-size: calc(0.75em + 1vmin);
+}
+
+p a {
+  text-decoration: none;
+  color: var(--turquoise);
+  transition: color 0.3s ease;
+}
+
+p a:hover {
+  color: var(--med-blue);
+}
+
+p img {
+    max-width: 50%;
+    float: right;
+}
+
+p span {
+    color: var(--turquoise);
+}
+
 .album-grid {
   margin: 2% auto;
   display: grid;

@@ -66,7 +66,6 @@ a {
 }
 
 p {
-  font-family: "Poppins";
   color: var(--off-white);
   font-size: calc(0.75em + 1vmin);
   padding: 10px;

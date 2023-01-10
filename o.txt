@@ -22,6 +22,7 @@
   - external website
 8. mem manager
   - lab 6
+9. Amazon Lightsail - add screenshots
 
 Deer boy - digital art
 jojo - physical art

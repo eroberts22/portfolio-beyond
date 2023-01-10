@@ -1,10 +1,26 @@
 <template>
-  <div>hi</div>
+  <ScrollUpButton />
+  <PageTitle :Title="title" />
 </template>
 
 <script>
-export default {
+import ScrollUpButton from "../../components/ScrollUpButton.vue";
+import PageTitle from "../../components/PageTitle.vue";
 
+export default {
+  name: "PortfolioBeyond",
+  components: {
+    ScrollUpButton,
+    PageTitle
+  },
+  data() {
+    return {
+      title: {
+        text: "Portfolio Beyond",
+        span: "."
+      }
+    }
+  }
 }
 </script>
 
