@@ -31,7 +31,7 @@
     <hr class="line-break">
     <div style="width: 100%">
       <h2>Demo</h2>
-
+        <LiteYouTubeEmbed id="Ztg2l8GjFS0" title="Haunted Apothecary" />
     </div>
   </div>
 </template>
@@ -39,12 +39,15 @@
 <script>
 import ScrollUpButton from "../../components/ScrollUpButton.vue";
 import PageTitle from "../../components/PageTitle.vue";
+import LiteYouTubeEmbed from "vue-lite-youtube-embed"
+import 'vue-lite-youtube-embed/style.css'
 
 export default {
   name: "HauntedApothecary",
   components: {
     ScrollUpButton,
     PageTitle,
+    LiteYouTubeEmbed
   },
   data() {
     return {
