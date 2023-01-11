@@ -30,14 +30,6 @@ const routes = [
     name: 'SpaceExplorer',
     component: lazyLoad('projects/SpaceExplorer')
   },
-  // {
-  //   path: '/space-explorer/game',
-  //   name: 'SpaceExplorerGame',
-  //   component: lazyLoad('projects/SpaceExplorerGame')
-  // },
-
-  //https://stackoverflow.com/questions/50633001/vuejs-vue-router-linking-an-external-website
-
   {
     path: '/haunted-apothecary',
     name: 'HauntedApothecary',

@@ -19,10 +19,10 @@
           :alt="title.text"
           class="img-wrap"
         />
-        <router-link
+        <a
+          href="https://eroberts22.github.io/space-explorer" target="_blank"
           class="btn btn-outline-light"
-          :to="{name: 'SpaceExplorerGame'}"
-          >Demo</router-link
+          >Demo</a
         >
         <p>{{ info[2] }}</p>
       </div>
