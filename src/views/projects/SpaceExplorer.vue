@@ -20,11 +20,11 @@
           class="img-wrap"
         />
         <a
-          href="https://eroberts22.github.io/space-explorer" target="_blank"
+          :href="demoLink" target="_blank"
           class="btn btn-outline-light"
           >Demo</a
         >
-        <p>{{ info[2] }}</p>
+        <p>Not configured to work on mobile</p>
       </div>
     </div>
   </div>
@@ -46,10 +46,10 @@ export default {
         text: "Space Explorer",
         span: ".",
       },
+      demoLink: "https://eroberts22.github.io/space-explorer",
       info: [
         "Space Explorer is a sidescroller version of the classic asteroids game implemented using HTML, CSS, and Javascript. I developed this game alongside fellow students at Whitworth University, Ethan Worth and Owen Foster, for our Internet Applications Development class. As a group, we went from knowing very little about web applications to developing this game in two weeks. I developed and provided the assets for this project.",
         "The starship has launched from a planet deep within a distant solar system with one mission: to get back to Earth with treasures, scientific discoveries, and research advancements. Unfortunately, there are obstacles, and to make it to the portal that takes the ship home, these must be managed. Asteroids come hurtling through space, damaging the starship's shields. Fuel is limited, and every evasive maneuver drains it. Managing these resources is crucial, or else mission failure is inevitable.",
-        "(Only works on desktop)",
       ],
     };
   },

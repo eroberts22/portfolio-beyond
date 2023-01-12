@@ -43,6 +43,15 @@ body {
   padding: 2%;
 }
 
+li a {
+  color: var(--off-white);
+  transition: color 0.3s ease;
+}
+
+li a:hover {
+  color: var(--med-blue);
+}
+
 p {
   font-family: "Poppins";
   font-size: calc(0.75em + 1vmin);

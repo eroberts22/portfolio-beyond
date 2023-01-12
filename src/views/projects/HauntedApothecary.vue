@@ -28,10 +28,13 @@
         />
       </div>
     </div>
-    <hr class="line-break">
+  </div>
+
+  <!-- demo -->
+  <PageTitle :Title="demoTitle"/>
+  <div class="central-box">
     <div style="width: 100%">
-      <h2>Demo</h2>
-        <LiteYouTubeEmbed id="Ztg2l8GjFS0" title="Haunted Apothecary" />
+      <LiteYouTubeEmbed id="Ztg2l8GjFS0" title="Haunted Apothecary" />
     </div>
   </div>
 </template>
@@ -55,6 +58,10 @@ export default {
         text: "Haunted Apothecary",
         span: ".",
       },
+      demoTitle: {
+        text: "Demonstration",
+        span: ".",
+      },
       info: [
         "Haunted Apothecary is a dungeon crawler game written in Java. I developed this game as well as the assets for it for Whitworth University's Java Application Development course.",
         "You have wandered into an old apothecary and have lost your way. As you explore the maze of rooms, you come across abandoned potions and ancient treasures, but unfortunately, this apothecary is haunted. Fortunately, along with the potions you have discovered, you are equipped with spells to aid you in battle against the spectres and spirits.",
@@ -64,11 +71,5 @@ export default {
 };
 </script>
 
-<style>
-h2 {
-  padding-bottom: 2%;
-  text-align: center;
-  font-family: "Poppins";
-  color: var(--med-blue);
-}
+<style scoped>
 </style>

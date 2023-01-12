@@ -38,7 +38,7 @@ export default {
   },
   methods: {
     format(text) {
-      return text.toLowerCase().trim().replace(" ", "-");
+      return text.toLowerCase().replace(/\s/g, "");
     },
     checkScreenForMobile() {
       this.windowWidth = window.innerWidth;
