@@ -91,7 +91,7 @@ export default {
           {
             text: "Farm Simulation",
             src: "flower.png",
-            routePath: "/",
+            routePath: "/farm-simulation",
             description: "A C++ Command Prompt Game"
           },
         ],

@@ -44,6 +44,11 @@ const routes = [
     path: '/portfolio-beyond',
     name: 'PortfolioBeyond',
     component: lazyLoad('projects/PortfolioBeyond')
+  },
+  {
+    path: '/farm-simulation',
+    name: 'FarmSimulation',
+    component: lazyLoad('projects/FarmSimulation')
   }
 ]
 

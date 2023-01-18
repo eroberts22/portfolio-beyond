@@ -6,7 +6,7 @@
   <div class="central-box">
     <div style="100%">
       <div class="inner-wrap-half">
-        <p>{{ intro }}</p>
+        <p>{{ info.intro }}</p>
       </div>
       <div class="inner-wrap-half">
         <img
@@ -51,25 +51,27 @@
       <div style="width: 100%">
         <div class="inner-wrap-half">
           <h4>Game Controls</h4>
-          <ListBuilder :items="gameControls" />
+          <ListBuilder :items="info.gameControls" />
           <h4>Goal</h4>
-          <p>{{ goal }}</p>
+          <p>{{ info.goal }}</p>
           <h4>Debug Keys</h4>
-          <ListBuilder :items="debugKeys" />
+          <ListBuilder :items="info.debugKeys" />
         </div>
         <div class="inner-wrap-half">
           <h4>Dependencies</h4>
-          <ListBuilder :items="dependencies" />
+          <ListBuilder :items="info.dependencies" />
           <h4>Run Program</h4>
-          <ListBuilder :items="buildInstructions" />
+          <ListBuilder :items="info.buildInstructions" />
         </div>
       </div>
     </div>
   </div>
 
   <!-- scene generation algorithms -->
+  <div id="scene-generation"></div>
 
   <!-- collision detection algorithms -->
+  <div id="collision-algorithm"></div>
 
   <!-- demo -->
   <div id="demo">
@@ -106,7 +108,7 @@ export default {
         span: ".",
       },
       objectTitle: {
-        text: "Objects & Textures",
+        text: "Objects",
         span: ".",
       },
       manualTitle: {
@@ -117,9 +119,51 @@ export default {
         text: "Demonstration",
         span: ".",
       },
-      intro:
-        "Asteroids 3D was developed in April of 2021 as the final project for Whitworth University's Computer Graphics course. I utilized C++ in combination with the openGL pipeline. Through the course, we learned how to render 3D objects created from Blender, compile the GLSL shading language, utilize lighting and textures, and understand object transformations.",
-      goal: "As you start flying your spaceship, avoid colliding with asteroids as you fly through the solar system.",
+      info: {
+        intro:
+          "Asteroids 3D was developed in April of 2021 as the final project for Whitworth University's Computer Graphics course. I utilized C++ in combination with the openGL pipeline. Through the course, we learned how to render 3D objects created from Blender, compile the GLSL shading language, utilize lighting and textures, and understand object transformations.",
+        goal: "As you start flying your spaceship, avoid colliding with asteroids as you fly through the solar system.",
+        gameControls: [
+          { text: "Press R to start" },
+          { text: "Press W to move up" },
+          { text: "Press A to move left" },
+          { text: "Press S to move down" },
+          { text: "Press D to move left" },
+        ],
+        dependencies: [
+          { text: "Cmake", url: "http://cmake.org/" },
+          { text: "GLFW Library", url: "https://github.com/glfw/glfw" },
+          {
+            text: "SB7 Examples",
+            url: "https://github.com/openglsuperbible/sb7code",
+          },
+        ],
+        debugKeys: [
+          {
+            text: "Press X for bounding boxes of the starship and first two asteroids",
+          },
+          { text: "Press C to show generated asteroid field pattern" },
+          { text: "Press V to show object to world matrix for first asteroid" },
+          { text: "Press B to show object to world matrix for starship" },
+        ],
+        buildInstructions: [
+          { text: "Open terminal in top level containing CMakeLists.txt" },
+          {
+            text: "When creating a new project run:",
+            subInfo: [
+              {
+                text: 'cmake -G "MinGW Makefiles" -S . -B . -DCMAKE_INSTALL_PREFIX=C:\\mingw-w64\\mingw64\\x86_64-w64-mingw32',
+              },
+            ],
+          },
+          { text: "Build Program:", subInfo: [{ text: "mingw32-make" }] },
+          {
+            text: "Run Executable:",
+            subInfo: [{ text: ".\\bin\\main.exe" }],
+          },
+        ],
+      },
+
       imagesGridShip: [
         {
           title: "Spaceship - Side View",
@@ -154,45 +198,6 @@ export default {
         {
           title: "Lose Panel",
           src: "asteroids3D/lose.png",
-        },
-      ],
-      gameControls: [
-        { text: "Press R to start" },
-        { text: "Press W to move up" },
-        { text: "Press A to move left" },
-        { text: "Press S to move down" },
-        { text: "Press D to move left" },
-      ],
-      dependencies: [
-        { text: "Cmake", url: "http://cmake.org/" },
-        { text: "GLFW Library", url: "https://github.com/glfw/glfw" },
-        {
-          text: "SB7 Examples",
-          url: "https://github.com/openglsuperbible/sb7code",
-        },
-      ],
-      debugKeys: [
-        {
-          text: "Press X for bounding boxes of the starship and first two asteroids",
-        },
-        { text: "Press C to show generated asteroid field pattern" },
-        { text: "Press V to show object to world matrix for first asteroid" },
-        { text: "Press B to show object to world matrix for starship" },
-      ],
-      buildInstructions: [
-        { text: "Open terminal in top level containing CMakeLists.txt" },
-        {
-          text: "When creating a new project run:",
-          subInfo: [
-            {
-              text: 'cmake -G "MinGW Makefiles" -S . -B . -DCMAKE_INSTALL_PREFIX=C:\\mingw-w64\\mingw64\\x86_64-w64-mingw32',
-            },
-          ],
-        },
-        { text: "Build Program:", subInfo: [{ text: "mingw32-make" }] },
-        {
-          text: "Run Executable:",
-          subInfo: [{ text: ".\\bin\\main.exe" }],
         },
       ],
     };

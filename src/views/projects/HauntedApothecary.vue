@@ -4,9 +4,9 @@
   <div class="central-box">
     <div style="width: 100%">
       <div class="inner-wrap-half">
-        <p>{{ info[0] }}</p>
+        <p>{{ info.intro1 }}</p>
         <br />
-        <p>{{ info[1] }}</p>
+        <p>{{ info.intro2 }}</p>
         <br />
         <p>
           See the source code
@@ -62,10 +62,10 @@ export default {
         text: "Demonstration",
         span: ".",
       },
-      info: [
-        "Haunted Apothecary is a dungeon crawler game written in Java. I developed this game as well as the assets for it for Whitworth University's Java Application Development course.",
-        "You have wandered into an old apothecary and have lost your way. As you explore the maze of rooms, you come across abandoned potions and ancient treasures, but unfortunately, this apothecary is haunted. Fortunately, along with the potions you have discovered, you are equipped with spells to aid you in battle against the spectres and spirits.",
-      ],
+      info: {
+        intro1: "Haunted Apothecary is a dungeon crawler game written in Java. I developed this game as well as the assets for it for Whitworth University's Java Application Development course.",
+        intro2: "You have wandered into an old apothecary and have lost your way. As you explore the maze of rooms, you come across abandoned potions and ancient treasures, but unfortunately, this apothecary is haunted. Fortunately, along with the potions you have discovered, you are equipped with spells to aid you in battle against the spectres and spirits.",
+      }
     };
   },
 };
