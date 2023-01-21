@@ -4,7 +4,14 @@
     <GridItem
       :image="image"
       :key="image.title"
-      v-for="image in imagesColorful"
+      v-for="image in imagesColorful1"
+    ></GridItem>
+  </div>
+  <div class="album-grid">
+    <GridItem
+      :image="image"
+      :key="image.title"
+      v-for="image in imagesColorful2"
     ></GridItem>
   </div>
   <div class="album-grid">
@@ -32,7 +39,14 @@
     <GridItem
       :image="image"
       :key="image.title"
-      v-for="image in imagesSketch"
+      v-for="image in imagesSketch1"
+    ></GridItem>
+  </div>
+  <div class="album-grid">
+    <GridItem
+      :image="image"
+      :key="image.title"
+      v-for="image in imagesSketch2"
     ></GridItem>
   </div>
   <div class="album-grid">
@@ -60,7 +74,7 @@ export default {
         text: "Fine Art",
         span: ".",
       },
-      imagesSketch: [
+      imagesSketch1: [
         // {
         //   title: "Jolyne Cujoh",
         //   src: "art-portfolio/physical/jolyne-cujoh.jpg",
@@ -73,6 +87,12 @@ export default {
           title: "Sketch - Woman II",
           src: "art-portfolio/physical/sketch-depth.jpg",
         },
+        {
+          title: "Sketch - Kenway",
+          src: "art-portfolio/physical/kenway.jpg"
+        }
+      ],
+      imagesSketch2: [
         {
           title: "Sketch - Pale Eyes",
           src: "art-portfolio/physical/sketch-pale-eyes.jpg",
@@ -106,10 +126,20 @@ export default {
           src: "art-portfolio/physical/roadways.jpg",
         },
       ],
-      imagesColorful: [
+      imagesColorful1: [
         {
           title: "Pale Forest",
           src: "art-portfolio/physical/pale-forest.jpg",
+        },
+        {
+          title: "Deep Space",
+          src: "art-portfolio/physical/watercolor-space.jpg",
+        },
+      ],
+      imagesColorful2: [
+        {
+          title: "Dandy",
+          src: "art-portfolio/physical/dandy.jpg"
         },
         {
           title: "Far Sky",
@@ -118,10 +148,6 @@ export default {
         {
           title: "Holly",
           src: "art-portfolio/physical/holly.jpg",
-        },
-        {
-          title: "Deep Space",
-          src: "art-portfolio/physical/watercolor-space.jpg",
         },
       ],
       imagesStillLife: [

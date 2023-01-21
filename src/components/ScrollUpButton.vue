@@ -40,7 +40,7 @@ export default {
     height: 40px;
     width: 40px;
     background: var(--med-blue);
-    right: 20px;
+    right: 25px;
     bottom: 20px;
     text-align: center;
     line-height: 42px;

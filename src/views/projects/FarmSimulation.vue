@@ -287,5 +287,8 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+.img-wrap {
+  padding: 20px;
+}
 </style>
