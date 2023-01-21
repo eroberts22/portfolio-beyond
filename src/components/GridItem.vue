@@ -41,8 +41,7 @@ export default {
       return text.toLowerCase().replace(/\s/g, "");
     },
     checkScreenForMobile() {
-      this.windowWidth = window.innerWidth;
-      if (this.windowWidth <= 875) {
+      if (window.innerWidth <= 875) {
         this.mobile = true;
         return;
       }
