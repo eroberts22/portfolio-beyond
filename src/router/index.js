@@ -63,7 +63,7 @@ const router = createRouter({
     if (to.hash) {
       return { el: to.hash }
     }
-    return { x: 0, y: 0 }
+    window.scrollTo(0, 0)
   }
 })
 
