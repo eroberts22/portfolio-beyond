@@ -1,27 +1,42 @@
 <template>
-  <ul>
-    <li :key="item.text" v-for="item in items">
-      <div v-if="!item.url">{{ item.text }}</div>
-      <a v-if="item.url" :href="item.url">{{ item.text }}</a>
-      <ul v-if="item.subInfo">
-        <li :key="subItem.text" v-for="subItem in item.subInfo">
-          {{ subItem.text }}
-        </li>
-      </ul>
-    </li>
-  </ul>
+  <div class="list-box">
+    <h3>{{ listObject.title }}</h3>
+    <ul>
+      <li :key="item.text" v-for="item in listObject.items">
+        <div v-if="!item.url">{{ item.text }}</div>
+        <a v-if="item.url" :href="item.url">{{ item.text }}</a>
+        <ul v-if="item.subInfo">
+          <li :key="subItem.text" v-for="subItem in item.subInfo">
+            {{ subItem.text }}
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
 </template>
 
 <script>
 export default {
   name: "ListBuilder",
   props: {
-    items: Object,
+    listObject: Object,
   },
 };
 </script>
 
 <style scoped>
+.list-box {
+  padding: 10px;
+}
+
+ul {
+  font-size: calc(0.75em + 1vmin);
+}
+
+h3 {
+  color: var(--turquoise);
+}
+
 ul li ul {
   color: var(--med-blue);
 }

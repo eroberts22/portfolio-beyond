@@ -50,18 +50,14 @@
     <div class="central-box">
       <div style="width: 100%">
         <div class="inner-wrap-half">
-          <h4>Game Controls</h4>
-          <ListBuilder :items="info.gameControls" />
+          <ListBuilder :listObject="info.gameControls" />
           <h4>Goal</h4>
           <p>{{ info.goal }}</p>
-          <h4>Debug Keys</h4>
-          <ListBuilder :items="info.debugKeys" />
+          <ListBuilder :listObject="info.debugKeys" />
         </div>
         <div class="inner-wrap-half">
-          <h4>Dependencies</h4>
-          <ListBuilder :items="info.dependencies" />
-          <h4>Run Program</h4>
-          <ListBuilder :items="info.buildInstructions" />
+          <ListBuilder :listObject="info.dependencies" />
+          <ListBuilder :listObject="info.buildInstructions" />
         </div>
       </div>
     </div>
@@ -123,45 +119,59 @@ export default {
         intro:
           "Asteroids 3D was developed in April of 2021 as the final project for Whitworth University's Computer Graphics course. I utilized C++ in combination with the openGL pipeline. Through the course, we learned how to render 3D objects created from Blender, compile the GLSL shading language, utilize lighting and textures, and understand object transformations.",
         goal: "As you start flying your spaceship, avoid colliding with asteroids as you fly through the solar system.",
-        gameControls: [
-          { text: "Press R to start" },
-          { text: "Press W to move up" },
-          { text: "Press A to move left" },
-          { text: "Press S to move down" },
-          { text: "Press D to move left" },
-        ],
-        dependencies: [
-          { text: "Cmake", url: "http://cmake.org/" },
-          { text: "GLFW Library", url: "https://github.com/glfw/glfw" },
-          {
-            text: "SB7 Examples",
-            url: "https://github.com/openglsuperbible/sb7code",
-          },
-        ],
-        debugKeys: [
-          {
-            text: "Press X for bounding boxes of the starship and first two asteroids",
-          },
-          { text: "Press C to show generated asteroid field pattern" },
-          { text: "Press V to show object to world matrix for first asteroid" },
-          { text: "Press B to show object to world matrix for starship" },
-        ],
-        buildInstructions: [
-          { text: "Open terminal in top level containing CMakeLists.txt" },
-          {
-            text: "When creating a new project run:",
-            subInfo: [
-              {
-                text: 'cmake -G "MinGW Makefiles" -S . -B . -DCMAKE_INSTALL_PREFIX=C:\\mingw-w64\\mingw64\\x86_64-w64-mingw32',
-              },
-            ],
-          },
-          { text: "Build Program:", subInfo: [{ text: "mingw32-make" }] },
-          {
-            text: "Run Executable:",
-            subInfo: [{ text: ".\\bin\\main.exe" }],
-          },
-        ],
+        gameControls: {
+          title: "Game Controls",
+          items: [
+            { text: "Press R to start" },
+            { text: "Press W to move up" },
+            { text: "Press A to move left" },
+            { text: "Press S to move down" },
+            { text: "Press D to move left" },
+          ],
+        },
+        dependencies: {
+          title: "Dependencies",
+          items: [
+            { text: "Cmake", url: "http://cmake.org/" },
+            { text: "GLFW Library", url: "https://github.com/glfw/glfw" },
+            {
+              text: "SB7 Examples",
+              url: "https://github.com/openglsuperbible/sb7code",
+            },
+          ],
+        },
+        debugKeys: {
+          title: "Debug Keys",
+          items: [
+            {
+              text: "Press X for bounding boxes of the starship and first two asteroids",
+            },
+            { text: "Press C to show generated asteroid field pattern" },
+            {
+              text: "Press V to show object to world matrix for first asteroid",
+            },
+            { text: "Press B to show object to world matrix for starship" },
+          ],
+        },
+        buildInstructions: {
+          title: "Build Instructions",
+          items: [
+            { text: "Open terminal in top level containing CMakeLists.txt" },
+            {
+              text: "When creating a new project run:",
+              subInfo: [
+                {
+                  text: 'cmake -G "MinGW Makefiles" -S . -B . -DCMAKE_INSTALL_PREFIX=C:\\mingw-w64\\mingw64\\x86_64-w64-mingw32',
+                },
+              ],
+            },
+            { text: "Build Program:", subInfo: [{ text: "mingw32-make" }] },
+            {
+              text: "Run Executable:",
+              subInfo: [{ text: ".\\bin\\main.exe" }],
+            },
+          ],
+        },
       },
 
       imagesGridShip: [

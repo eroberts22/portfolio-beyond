@@ -73,7 +73,7 @@ export default {
           {
             text: "Schedular Dispatch Sim",
             src: "icons/microchip-solid.svg",
-            routePath: "/",
+            routePath: "/schedular-dispatch",
             description: "CPU Dispatch Scheduling Model"
           },
           {
