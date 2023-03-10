@@ -1,9 +1,10 @@
 <template>
   <div v-show="!mobile" class="navbar-links">
-    <router-link :to="{ name: 'Home' }">HOME</router-link>
-    <router-link :to="{ name: 'Projects' }">PROJECTS</router-link>
-    <router-link :to="{ name: 'Art' }">ART PORTFOLIO</router-link>
-    <router-link :to="{ name: 'About' }">ABOUT ME</router-link>
+    <router-link :to="{ name: 'Home' }">{{ navTitles[0] }}</router-link>
+    <router-link :to="{ name: 'Projects' }">{{ navTitles[1] }}</router-link>
+    <router-link :to="{ name: 'Experience' }">{{ navTitles[2] }}</router-link>
+    <router-link :to="{ name: 'Art' }">{{ navTitles[3] }}</router-link>
+    <router-link :to="{ name: 'About' }">{{ navTitles[4] }}</router-link>
   </div>
   <div class="icon">
     <font-awesome-icon
@@ -16,10 +17,11 @@
   </div>
   <transition name="mobile-nav">
     <div v-show="mobileNav" class="dropdown-nav">
-      <router-link :to="{ name: 'Home' }">HOME</router-link>
-      <router-link :to="{ name: 'Projects' }">PROJECTS</router-link>
-      <router-link :to="{ name: 'Art' }">ART PORTFOLIO</router-link>
-      <router-link :to="{ name: 'About' }">ABOUT ME</router-link>
+    <router-link :to="{ name: 'Home' }">{{ navTitles[0] }}</router-link>
+    <router-link :to="{ name: 'Projects' }">{{ navTitles[1] }}</router-link>
+    <router-link :to="{ name: 'Experience' }">{{ navTitles[2] }}</router-link>
+    <router-link :to="{ name: 'Art' }">{{ navTitles[3] }}</router-link>
+    <router-link :to="{ name: 'About' }">{{ navTitles[4] }}</router-link>
     </div>
   </transition>
 </template>
@@ -32,6 +34,13 @@ export default {
       mobile: null,
       mobileNav: null,
       windowWidth: null,
+      navTitles: [
+        "HOME",
+        "PROJECTS",
+        "EXPERIENCE",
+        "ART",
+        "ABOUT"
+      ]
     };
   },
   computed: {

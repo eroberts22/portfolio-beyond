@@ -1,7 +1,7 @@
 <template>
   <div class="list-box">
     <h3>{{ listObject.title }}</h3>
-    <ul>
+    <ul v-if="listObject.items">
       <li :key="item.text" v-for="item in listObject.items">
         <div v-if="!item.url">{{ item.text }}</div>
         <a v-if="item.url" :href="item.url">{{ item.text }}</a>

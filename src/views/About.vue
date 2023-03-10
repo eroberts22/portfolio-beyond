@@ -82,25 +82,4 @@ export default {
 </script>
 
 <style scoped>
-.inner-wrap-third,
-.inner-wrap-twothird {
-  float: left;
-  width: 100%;
-}
-
-.inner-wrap-half-small {
-  float: left;
-  width: 50%;
-}
-
-@media (min-width: 950px) {
-
-  .inner-wrap-twothird {
-    width: 66%;
-  }
-
-  .inner-wrap-third {
-    width: 33%;
-  }
-}
 </style>

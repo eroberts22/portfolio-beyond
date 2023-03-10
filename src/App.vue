@@ -82,6 +82,8 @@ p span {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
+.inner-wrap-third,
+.inner-wrap-twothird,
 .inner-wrap-half {
   float: left;
   width: 100%;
@@ -99,6 +101,14 @@ p span {
 
   .img-wrap {
     padding: 10px;
+  }
+
+  .inner-wrap-twothird {
+    width: 66%;
+  }
+
+  .inner-wrap-third {
+    width: 33%;
   }
 }
 
