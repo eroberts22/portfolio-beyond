@@ -116,4 +116,8 @@ p span {
   border-top: 8px solid var(--off-white);
   border-radius: 5px;
 }
+
+h3 {
+  color: var(--turquoise);
+}
 </style>

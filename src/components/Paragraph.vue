@@ -1,6 +1,6 @@
 <template>
   <div class="paragraph">
-    <h3>{{ item.title }}</h3>
+    <h3 v-if="item.title">{{ item.title }}</h3>
     <p>{{ item.text }}</p>
   </div>
 
@@ -16,9 +16,5 @@ export default {
 <style scoped>
 .paragraph {
   padding: 10px;
-}
-
-h3 {
-  color: var(--turquoise);
 }
 </style>

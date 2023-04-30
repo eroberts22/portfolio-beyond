@@ -33,10 +33,6 @@ ul {
   font-size: calc(0.75em + 1vmin);
 }
 
-h3 {
-  color: var(--turquoise);
-}
-
 ul li ul {
   color: var(--med-blue);
 }
