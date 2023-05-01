@@ -132,7 +132,7 @@ export default {
           items: [
             { text: "Response - " },
             { text: "Wait - " },
-            { text: "Turnaround - " },
+            { text: "Turnaround - The interval of time between the submission of a process and its completion. Includes execution time and as well as time spent waiting for resources" },
           ],
         },
         overview: {
