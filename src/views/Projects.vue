@@ -79,13 +79,13 @@ export default {
           {
             text: "Memory Manager",
             src: "icons/memory-solid.svg",
-            routePath: "/",
+            routePath: "/memory-manager",
             description: "Memory Error Handling Library"
           },
           {
             text: "Coffee Script",
             src: "coffee-script/coffeecup.png",
-            routePath: "/",
+            routePath: "/coffee-script",
             description: "Scanner and Parser"
           },
           {

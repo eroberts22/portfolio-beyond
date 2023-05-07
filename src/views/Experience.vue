@@ -72,15 +72,17 @@ export default {
           items: [
             { text: "Docker" },
             { text: "Kubernetes" },
-            { text: "EKS" }
+            { text: "EKS" },
+            { text: "Keda (Kubernetes Event-Driven Autoscaling)"}
           ]
         },
         versionTools: {
-          title: "Version Tools",
+          title: "Versioning Tools and Deployment",
           items: [
             { text: "Git" },
             { text: "Bitbucket" },
-            { text: "Github" }
+            { text: "Github" },
+            { text: "Drone CI"}
           ]
         },
         ticketAndMonitor: {

@@ -26,21 +26,21 @@
     <ListBuilder :listObject="info.modeledAlgorithms" />
 
     <img
-      style="filter: brightness(85%)"
+      style="filter: brightness(85%); padding: 1rem"
       :src="require('../../assets/schedular/response.png')"
       alt="schedular-diagram"
       class="img-wrap"
     />
 
     <img
-      style="filter: brightness(85%)"
+      style="filter: brightness(85%); padding: 1rem"
       :src="require('../../assets/schedular/wait.png')"
       alt="schedular-diagram"
       class="img-wrap"
     />
 
     <img
-      style="filter: brightness(85%)"
+      style="filter: brightness(85%); padding: 1rem"
       :src="require('../../assets/schedular/turnaround.png')"
       alt="schedular-diagram"
       class="img-wrap"
@@ -130,9 +130,10 @@ export default {
         definitions: {
           title: "Definitions",
           items: [
-            { text: "Response - " },
-            { text: "Wait - " },
-            { text: "Turnaround - The interval of time between the submission of a process and its completion. Includes execution time and as well as time spent waiting for resources" },
+            { text: "Burst Time - The interval of time the process spends executing."},
+            { text: "Response Time - The interval of time between the arrival of the process and the first execution time of a process." },
+            { text: "Wait Time - The interval of time the process spends in the ready queue, waiting to be executed." },
+            { text: "Turnaround Time - The interval of time between the arrival of a process and its completion. Includes execution time and as well as time spent waiting for resources" },
           ],
         },
         overview: {
@@ -140,7 +141,7 @@ export default {
         },
         assumptions: {
           title: "Assumptions of the Model",
-          text: "An assumption made in designing this system is implementing the timing as discrete events, instead of using a continuous interval clock module. These discrete events include events such as CPU bursts, I/O bursts, and process shuffling. Process queues are modeled using deque containers, so the elements can be pushed and popped from both sides and for iterator functionality. In the model, the process at the front of the queue is the process that is currently executing. Upon arrival time, processes are moved to the CPU queue which holds processes that are ready for CPU execution. Processes in execution will run for their designated burst time. Some processes require an I/O operation. To model an I/O operation, when the I/O burst time is higher than the remaining CPU burst time, the process is moved to the I/O queue where it waits for I/O operation. Once I/O is completed, the process is moved back to the CPU queue where it is again ready for CPU execution.",
+          text: "An assumption made in designing this system is implementing the timing as discrete events, instead of using a continuous interval clock module. These discrete events include events such as CPU bursts, I/O bursts, and process shuffling. Process queues are modeled using deque containers, so the elements can be pushed and popped from both sides and for iterator functionality. In the model, the process at the front of the queue is the process that is currently executing. Upon arrival time, processes are moved to the CPU queue which holds processes that are ready for CPU execution. Processes in execution will run for their designated burst time. Some processes require an I/O operation. To model an I/O operation, when the I/O burst time is higher than the remaining CPU burst time, the process is moved to the I/O queue where it waits for I/O operation. Once I/O is completed, the process is moved back to the CPU queue where it is again ready for CPU execution. Once a process has completed its CPU and I/O burst times, it is considered completed.",
         },
         diagramTitle: "Process Schedular Diagram",
       },

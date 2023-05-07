@@ -56,6 +56,16 @@ const routes = [
     component: lazyLoad('projects/SchedularDispatchSim')
   },
   {
+    path: '/memory-manager',
+    name: 'MemoryManager',
+    component: lazyLoad('projects/MemoryManager')
+  },
+  {
+    path: '/coffee-script',
+    name: 'CoffeeScript',
+    component: lazyLoad('projects/CoffeeScript')
+  },
+  {
     path: '/farm-simulation',
     name: 'FarmSimulation',
     component: lazyLoad('projects/FarmSimulation')
