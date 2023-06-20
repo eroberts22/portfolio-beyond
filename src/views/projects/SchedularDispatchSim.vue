@@ -13,7 +13,7 @@
 
     <h3>{{ info.diagramTitle }}</h3>
     <img
-      style="filter: brightness(85%); padding: 20px"
+      style="filter: brightness(85%)"
       :src="require('../../assets/schedular/schedular-diagram.png')"
       alt="schedular-diagram"
       class="img-wrap"
@@ -26,21 +26,21 @@
     <ListBuilder :listObject="info.modeledAlgorithms" />
 
     <img
-      style="filter: brightness(85%); padding: 1rem"
+      style="filter: brightness(85%);"
       :src="require('../../assets/schedular/response.png')"
       alt="schedular-diagram"
       class="img-wrap"
     />
 
     <img
-      style="filter: brightness(85%); padding: 1rem"
+      style="filter: brightness(85%)"
       :src="require('../../assets/schedular/wait.png')"
       alt="schedular-diagram"
       class="img-wrap"
     />
 
     <img
-      style="filter: brightness(85%); padding: 1rem"
+      style="filter: brightness(85%)"
       :src="require('../../assets/schedular/turnaround.png')"
       alt="schedular-diagram"
       class="img-wrap"
@@ -150,5 +150,9 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+.img-wrap {
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
 </style>

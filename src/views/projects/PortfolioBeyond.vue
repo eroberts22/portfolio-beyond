@@ -4,13 +4,15 @@
 
   <div class="central-box">
     <p>
-      See the source code
+      See the current source code
       <a href="https://github.com/eroberts22/portfolio-beyond" target="_blank">here</a>
+      - Vue.js
     </p>
     <br />
     <p>
       See the old source code
       <a href="https://github.com/eroberts22/portfoliobeyond" target="_blank">here</a>
+      - HTML/CSS/JavaScript
     </p>
     <br />
     

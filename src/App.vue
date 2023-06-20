@@ -39,7 +39,7 @@ body {
   background: rgba(0, 0, 0, 0.5);
   border-radius: 6px;
   margin-top: 2%;
-  margin-bottom: 5%;
+  margin-bottom: 2%;
   padding: 2%;
 }
 
@@ -91,7 +91,7 @@ p span {
 
 .img-wrap {
   width: 100%;
-  padding: 20px;
+  padding: 10%;
 }
 
 @media (min-width: 950px) {
@@ -100,7 +100,7 @@ p span {
   }
 
   .img-wrap {
-    padding: 10px;
+    padding: 10%;
   }
 
   .inner-wrap-twothird {
