@@ -102,6 +102,7 @@ h2 {
   text-align: center;
   font-family: "Poppins";
   color: var(--med-blue);
+  font-size: calc(1.75em + 1vmin)
 }
 
 .line-break {

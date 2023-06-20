@@ -22,5 +22,7 @@ span {
 
 .text {
   font-family: "Poppins";
+  font-size: calc(0.75em + 1.0vmin
+  );
 }
 </style>

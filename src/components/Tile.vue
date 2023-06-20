@@ -34,7 +34,7 @@ export default {
 <style scoped>
 .card-title {
   color: var(--off-white);
-  font-size: calc(1.2em + 1.0vmin);
+  font-size: calc(1.6em + 1.0vmin);
 }
 
 .bg-gray {
@@ -47,6 +47,7 @@ export default {
   -moz-transition: 0.3s;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  margin: 5px;
 }
 
 .card:hover {

@@ -28,7 +28,7 @@ export default {
 <style scoped>
 .page-sub-title {
   text-align: left;
-  font-size: calc(1.3em + 0.5vmin);
+  font-size: calc(1.8em + 0.5vmin);
   font-weight: 400;
   padding-left: 20%;
   margin-bottom: 10px;

@@ -85,6 +85,7 @@ export default {
   color: var(--off-white);
   padding: 10px 16px;
   transition: color 0.3s ease;
+  font-size: calc(0.75em + 1.5vmin);
 }
 
 .navbar-links a:hover {
