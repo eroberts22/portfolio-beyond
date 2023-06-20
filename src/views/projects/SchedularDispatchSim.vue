@@ -45,39 +45,6 @@
       alt="schedular-diagram"
       class="img-wrap"
     />
-
-    <!-- <div style="width: 100%">
-      <div class="inner-wrap-half">
-        <img
-          style="filter: brightness(85%)"
-          :src="require('../../assets/schedular/response.png')"
-          alt="schedular-diagram"
-          class="img-wrap"
-        />
-      </div>
-    </div>
-
-    <div style="width: 100%">
-      <div class="inner-wrap-half">
-        <img
-          style="filter: brightness(85%)"
-          :src="require('../../assets/schedular/wait.png')"
-          alt="schedular-diagram"
-          class="img-wrap"
-        />
-      </div>
-    </div>
-
-    <div style="width: 100%">
-      <div class="inner-wrap-half">
-        <img
-          style="filter: brightness(85%)"
-          :src="require('../../assets/schedular/turnaround.png')"
-          alt="schedular-diagram"
-          class="img-wrap"
-        />
-      </div>
-    </div> -->
   </div>
 </template>
 
