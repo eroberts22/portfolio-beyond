@@ -62,7 +62,7 @@
         />
         <img
           :src="require('../../assets/farm-sim/waterexceed.png')"
-          alt="water"
+          alt="waterexceed"
           class="img-wrap"
         />
       </div>
@@ -78,7 +78,7 @@
       <div class="inner-wrap-half">
         <img
           :src="require('../../assets/farm-sim/harvested.png')"
-          alt="water"
+          alt="harvest"
           class="img-wrap"
         />
       </div>
@@ -94,7 +94,7 @@
       <div class="inner-wrap-half">
         <img
           :src="require('../../assets/farm-sim/sellitems.png')"
-          alt="water"
+          alt="sellItems"
           class="img-wrap"
         />
       </div>
@@ -108,12 +108,12 @@
         <div class="inner-wrap-half">
           <img
             :src="require('../../assets/farm-sim/dayprogress1.png')"
-            alt="water"
+            alt="dayprogress1"
             class="img-wrap"
           />
           <img
             :src="require('../../assets/farm-sim/dayprogress2.png')"
-            alt="water"
+            alt="dayprogress2"
             class="img-wrap"
           />
         </div>
@@ -129,12 +129,12 @@
         <div class="inner-wrap-half">
           <img
             :src="require('../../assets/farm-sim/dayprogress1.png')"
-            alt="water"
+            alt="dayprogress1"
             class="img-wrap"
           />
           <img
             :src="require('../../assets/farm-sim/dayprogress2.png')"
-            alt="water"
+            alt="dayprogress2"
             class="img-wrap"
           />
         </div>
@@ -149,14 +149,14 @@
         <Paragraph :item="info.showGardenAndStorage" />
         <img
           :src="require('../../assets/farm-sim/storageexample.png')"
-          alt="water"
+          alt="storageexample"
           class="img-wrap"
         />
       </div>
       <div class="inner-wrap-half">
         <img
           :src="require('../../assets/farm-sim/gardenexample.png')"
-          alt="water"
+          alt="gardenexample"
           class="img-wrap"
         />
       </div>
@@ -172,7 +172,7 @@
       <div class="inner-wrap-half">
         <img
           :src="require('../../assets/farm-sim/statsexample.png')"
-          alt="water"
+          alt="statsexample"
           class="img-wrap"
         />
       </div>
@@ -186,7 +186,7 @@
         <div class="inner-wrap-half">
           <img
             :src="require('../../assets/farm-sim/options.png')"
-            alt="water"
+            alt="options"
             class="img-wrap"
           />
         </div>
@@ -202,7 +202,7 @@
         <div class="inner-wrap-half">
           <img
             :src="require('../../assets/farm-sim/options.png')"
-            alt="water"
+            alt="options"
             class="img-wrap"
           />
         </div>
@@ -288,7 +288,4 @@ export default {
 </script>
 
 <style scoped>
-.img-wrap {
-  padding: 20px;
-}
 </style>

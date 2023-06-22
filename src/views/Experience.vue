@@ -3,22 +3,26 @@
   <PageTitle :Title="experienceTitle" />
   <div class="central-box">
     <div style="width: 100%">
-      <div class="inner-wrap-third">
-        <ListBuilder :listObject="experienceItems.programming" />
+      <div >
+        <ListBuilder :listObject="experienceItems.skills" />
       </div>
-      <div class="inner-wrap-third">
+    </div>
+    <hr class="line-break" />
+    
+    <div style="width: 100%">
+      <div class="inner-wrap-half">
         <ListBuilder :listObject="experienceItems.cloudService" />
       </div>
-      <div class="inner-wrap-third">
+      <div class="inner-wrap-half">
         <ListBuilder :listObject="experienceItems.containerDeployment" />
       </div>
     </div>
     <div style="width: 100%">
-      <div class="inner-wrap-third">
-        <ListBuilder :listObject="experienceItems.versionTools" />
+      <div class="inner-wrap-half">
+        <ListBuilder :listObject="experienceItems.programming" />
       </div>
-      <div class="inner-wrap-third">
-        <ListBuilder :listObject="experienceItems.ticketAndMonitor" />
+      <div class="inner-wrap-half">
+        <ListBuilder :listObject="experienceItems.versionTools" />
       </div>
     </div>
   </div>
@@ -45,54 +49,50 @@ export default {
         programming: {
           title: "Programming",
           items: [
-            { text: "Ruby on Rails" },
-            { text: "Javascript" },
-            { text: "C/C++" },
-            { text: "Python" },
-            { text: "YAML" },
-            { text: "JSON" },
-            { text: "SQL" }
+            { text: "Utilized JavaScript and frontend frameworks to create responsive and user-friendly interfaces." },
+            { text: "Developed and maintained Ruby on Rails applications, implementing robust and scalable backend functionality. " },
+            { text: "Experience monitoring Redis queues and dynamically scaling a Sidekiq application in Kubernetes based on the number of jobs in the queues, optimizing resource utilization and responsiveness." },
           ]
         },
         cloudService: { 
           title: "AWS Cloud Services",
           items: [
-            { text: "EKS" },
-            { text: "EC2" },
-            { text: "ECR" },
-            { text: "Lambda" },
-            { text: "RDS" },
-            { text: "S3" },
-            { text: "SQS" },
-            { text: "Route 53" }
+            { text: "Managed cloud infrastructure on AWS, deploying applications on EKS." },
+            { text: "Utilized ECR for creating and managing private container registries, enabling secure storage and distribution of Docker container images." },
+            { text: "Leveraged S3 for scalable and cost-effective storage of files and assets." },
+            { text: "Implemented asynchronous communication between systems using SQS for reliable message queuing." },
+            { text: "Managed DNS records and routing using Route 53 for seamless access to applications." }
           ]
         },
         containerDeployment: {
           title: "Container Technologies",
           items: [
-            { text: "Docker" },
-            { text: "Kubernetes" },
-            { text: "EKS" },
-            { text: "Keda (Kubernetes Event-Driven Autoscaling)"}
+            { text: "Hosted Ruby on Rails applications on Kubernetes clusters, ensuring seamless deployment and scalability via Keda (Kubernetes event-driven autoscaling)." },
+            { text: "Managed cloud infrastructure on AWS, deploying applications on EKS." },
+            { text: "Experience utilizing Kubernetes features such as deployments, services, and ingress controllers to manage application resources effectively." },
+            { text: "Utilized Docker for containerization, ensuring consistency and portability of applications across environments, as well as facilitating efficient deployment and orchestration of Ruby on Rails applications."}
           ]
         },
         versionTools: {
           title: "Versioning Tools and Deployment",
           items: [
-            { text: "Git" },
-            { text: "Bitbucket" },
-            { text: "Github" },
-            { text: "Drone CI"}
+            { text: "Collaborated with cross-functional teams using GitLab and Bitbucket for version control and code collaboration." },
+            { text: "Implemented CI/CD pipelines with Drone CI, automating build, test, and deployment processes." },
+            { text: "Utilized Jira for project management, tracking tasks, and ensuring project milestones and deadlines were met."}
           ]
         },
-        ticketAndMonitor: {
-          title: "Ticketing and Monitoring",
+        skills: {
+          title: "Skills",
           items: [
-            { text: "Jira" },
-            { text: "Grafana"},
-            { text: "CloudWatch"}
+            { text: "Programming Languages: Ruby on Rails, JavaScript, C/C++, Python" },
+            { text: "Job Processing: Sidekiq, Redis" },
+            { text: "Container Technologies: Docker, Kubernetes (EKS), Keda (Kubernetes Event-Driven Autoscaling)" },
+            { text: "AWS Cloud Services: EKS, EC2, ECR, Lambda, S3, SQS, Route 53" },
+            { text: "Version Control: GitLab, Bitbucket, Github" },
+            { text: "CI/CD: Drone CI, GitLab" },
+            { text: "Project Management: Jira" },
           ]
-        }
+        },
       },
     }
   }

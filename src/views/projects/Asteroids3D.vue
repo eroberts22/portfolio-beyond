@@ -51,7 +51,7 @@
       <div style="width: 100%">
         <div class="inner-wrap-half">
           <ListBuilder :listObject="info.gameControls" />
-          <h4>Goal</h4>
+          <h3>Goal</h3>
           <p>{{ info.goal }}</p>
           <ListBuilder :listObject="info.debugKeys" />
         </div>
