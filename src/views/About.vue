@@ -72,7 +72,7 @@ export default {
       imgURL: require("../assets/witch-ta.gif"),
       linkedInURL: "https://www.linkedin.com/in/elizabeth-roberts-in/",
       githubURL: "https://github.com/eroberts22",
-      resumeURL: "",
+      resumeURL: "/files/resume2023.docx",
       linkedInLogo: { prefix: "fab", icon: "linkedin" },
       githubLogo: { prefix: "fab", icon: "github" },
       resumeLogo: { prefix: "fas", icon: "file" },
