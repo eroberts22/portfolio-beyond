@@ -11,7 +11,7 @@
     
     <div style="width: 100%">
       <div class="inner-wrap-half">
-        <ListBuilder :listObject="experienceItems.programming" />
+        <ListBuilder :listObject="experienceItems.cloudService" />
       </div>
       <div class="inner-wrap-half">
         <ListBuilder :listObject="experienceItems.containerDeployment" />
@@ -19,7 +19,7 @@
     </div>
     <div style="width: 100%">
       <div class="inner-wrap-half">
-        <ListBuilder :listObject="experienceItems.cloudService" />
+        <ListBuilder :listObject="experienceItems.programming" />
       </div>
       <div class="inner-wrap-half">
         <ListBuilder :listObject="experienceItems.versionTools" />
@@ -88,7 +88,6 @@ export default {
             { text: "Job Processing: Sidekiq, Redis" },
             { text: "Container Technologies: Docker, Kubernetes (EKS), Keda (Kubernetes Event-Driven Autoscaling)" },
             { text: "AWS Cloud Services: EKS, EC2, ECR, Lambda, S3, SQS, Route 53" },
-            { text: "Data Formats: YAML, JSON, SQL" },
             { text: "Version Control: GitLab, Bitbucket, Github" },
             { text: "CI/CD: Drone CI, GitLab" },
             { text: "Project Management: Jira" },

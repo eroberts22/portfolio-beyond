@@ -1,6 +1,7 @@
 <template>
   <div class="paragraph">
     <h3 v-if="item.title">{{ item.title }}</h3>
+    <br>
     <p>{{ item.text }}</p>
   </div>
 

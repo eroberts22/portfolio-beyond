@@ -3,7 +3,13 @@
   <PageTitle :Title="title" />
   <div class="central-box">
     <div style="width: 100%">
-      <div class="inner-wrap-half"><Paragraph :item="info.overview" /></div>
+      <div class="inner-wrap-half">
+        <Paragraph :item="info.overview" />
+        <p>
+          See the source code
+          <a href="https://github.com/eroberts22/scheduler-dispatch-sim" target="_blank">here</a>
+        </p>
+      </div>
       <div class="inner-wrap-half">
         <ListBuilder :listObject="info.definitions" />
       </div>
@@ -28,21 +34,21 @@
     <img
       style="filter: brightness(85%);"
       :src="require('../../assets/schedular/response.png')"
-      alt="schedular-diagram"
+      alt="response"
       class="img-wrap"
     />
 
     <img
       style="filter: brightness(85%)"
       :src="require('../../assets/schedular/wait.png')"
-      alt="schedular-diagram"
+      alt="wait"
       class="img-wrap"
     />
 
     <img
       style="filter: brightness(85%)"
       :src="require('../../assets/schedular/turnaround.png')"
-      alt="schedular-diagram"
+      alt="turnaround"
       class="img-wrap"
     />
   </div>
@@ -121,5 +127,8 @@ export default {
 .img-wrap {
   padding-top: 1%;
   padding-bottom: 1%;
+}
+p {
+  padding: 10px;
 }
 </style>

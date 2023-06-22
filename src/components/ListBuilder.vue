@@ -35,5 +35,6 @@ ul {
 
 ul li ul {
   color: var(--med-blue);
+  font-size: calc(0.5em + 1vmin);
 }
 </style>
