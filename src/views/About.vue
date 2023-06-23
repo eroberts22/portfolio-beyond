@@ -45,7 +45,7 @@ export default {
       AboutMe: {
         title: "About Me",
         textCollection: [
-          { text: "automation engineer for Two Barrels LLC" },
+          { text: "software engineer for Two Barrels LLC" },
           {
             text: "graduated May 2022 with Bachelor of Science in Computer Science",
           },
@@ -57,7 +57,7 @@ export default {
       Aspiring: {
         title: "Aspiring",
         textCollection: [
-          { text: "Software Developer" },
+          { text: "Game Developer" },
           { text: "Technical Artist" },
         ],
       },
