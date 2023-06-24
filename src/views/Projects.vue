@@ -72,13 +72,13 @@ export default {
         [
           {
             text: "Schedular Dispatch Sim",
-            src: "icons/microchip-solid.svg",
+            src: "icons/cpu.png",
             routePath: "/schedular-dispatch",
             description: "CPU Dispatch Scheduling Model"
           },
           {
             text: "Memory Manager",
-            src: "icons/memory-solid.svg",
+            src: "icons/memory-stick.png",
             routePath: "/memory-manager",
             description: "Memory Error Handling Library"
           },
