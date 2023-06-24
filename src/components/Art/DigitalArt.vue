@@ -10,6 +10,9 @@
     <GridItem :image="image" :key="image.title" v-for="image in imagesTwo"></GridItem>
   </div>
   <div class="album-grid">
+    <GridItem :image="image" :key="image.title" v-for="image in imagesIcons"></GridItem>
+  </div>
+  <div class="album-grid">
     <GridItem :image="image" :key="image.title" v-for="image in imagesThree"></GridItem>
   </div>
 </template>
@@ -52,6 +55,16 @@ export default {
         {
           title: 'Flower Icon',
           src: 'flower.png',
+        }
+      ],
+      imagesIcons: [
+        {
+          title: 'Microchip',
+          src: 'icons/cpu.png',
+        },
+        {
+          title: 'Memory Stick',
+          src: 'icons/memory-stick.png',
         }
       ],
       imagesThree: [
