@@ -59,11 +59,11 @@ export default {
       ],
       imagesIcons: [
         {
-          title: 'Microchip',
+          title: 'Microchip Icon',
           src: 'icons/cpu.png',
         },
         {
-          title: 'Memory Stick',
+          title: 'Memory Stick Icon',
           src: 'icons/memory-stick.png',
         }
       ],

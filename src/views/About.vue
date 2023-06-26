@@ -65,7 +65,7 @@ export default {
         title: "My Hobbies",
         textCollection: [
           { text: "Video Games" },
-          { text: "Digital Art" },
+          { text: "Digital & Traditional Art" },
           { text: "Gardening" },
         ],
       },

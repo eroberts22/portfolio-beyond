@@ -102,7 +102,7 @@ export default {
   align-items: center;
   position: absolute;
   top: 0;
-  right: 20px;
+  right: 10px;
   height: 100%;
 }
 
