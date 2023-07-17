@@ -39,6 +39,10 @@ export default {
           src: 'art-portfolio/digital/ghost.png'
         },
         {
+          title: 'Faun',
+          src: 'art-portfolio/digital/deer-final.png'
+        },
+        {
           title: 'Creatures of the Forest',
           src: 'art-portfolio/digital/sagecropped.png'
         }
