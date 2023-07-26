@@ -3,6 +3,7 @@
   <div class="album-grid">
     <GridItem :image="image" :key="image.title" v-for="image in imagesInGrid"></GridItem >
   </div>
+  <GridItem :image="image" :key="image.title" v-for="image in imagesOutsideGrid"></GridItem >
 </template>
 
 <script>
@@ -66,12 +67,13 @@ export default {
           title: "Treasure Chest",
           src: "apothecary/chest.png",
         },
-        {
+      ],
+      imagesOutsideGrid: [
+      {
           title: "Dungeon Background",
           src: "apothecary/background.png",
         },
       ],
-      imagesOutsideGrid: [],
     };
   },
 };
