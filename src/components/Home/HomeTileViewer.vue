@@ -1,7 +1,7 @@
 <template>
   <div class="central-box">
     <div class="row">
-      <div class="col-lg-4 col-sm-12 py-2" :key="card.text" v-for="card in cards">
+      <div class="col-xl-3 col-md-6 col-12 py-2" :key="card.text" v-for="card in cards">
         <Tile :homeTile="card" />
       </div>
     </div>
@@ -23,6 +23,11 @@ export default {
           text: "Projects",
           src: "icons/devproj.png",
           routePath: "/projects",
+        },
+        {
+          text: "Experience",
+          src: "icons/devexp.png",
+          routePath: "/experience"
         },
         {
           text: "Art",
