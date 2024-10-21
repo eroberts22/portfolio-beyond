@@ -71,14 +71,14 @@ export default {
   data() {
     return {
       title: {
-        text: "Fine Art",
+        text: "Paintings & Sketches",
         span: ".",
       },
       imagesSketch1: [
-        // {
-        //   title: "Jolyne Cujoh",
-        //   src: "art-portfolio/physical/jolyne-cujoh.jpg",
-        // },
+        {
+          title: "Sketch - Jolyne Cujoh",
+          src: "art-portfolio/physical/jolyne-cujoh.jpg",
+        },
         {
           title: "Sketch - Woman I",
           src: "art-portfolio/physical/sketch-fallout.jpg",

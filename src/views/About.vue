@@ -45,9 +45,9 @@ export default {
       AboutMe: {
         title: "About Me",
         textCollection: [
-          { text: "software engineer for Two Barrels LLC" },
+          { text: "software engineer at Commerce Architects" },
           {
-            text: "graduated May 2022 with Bachelor of Science in Computer Science",
+            text: "graduated with Bachelor of Science in Computer Science",
           },
           {
             text: "experience tutoring for Whitworth University's Computer Science department",
@@ -72,7 +72,7 @@ export default {
       imgURL: require("../assets/witch-ta.gif"),
       linkedInURL: "https://www.linkedin.com/in/elizabeth-roberts-in/",
       githubURL: "https://github.com/eroberts22",
-      resumeURL: "/files/resume2023.docx",
+      resumeURL: "/files/resume2024.pdf",
       linkedInLogo: { prefix: "fab", icon: "linkedin" },
       githubLogo: { prefix: "fab", icon: "github" },
       resumeLogo: { prefix: "fas", icon: "file" },

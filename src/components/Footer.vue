@@ -1,5 +1,5 @@
 <template>
-  <div class="footer">&copy; 2023 by Elizabeth Roberts</div>
+  <div class="footer">&copy; 2024 by Elizabeth Roberts</div>
 </template>
 
 <script>

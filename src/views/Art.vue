@@ -44,7 +44,7 @@
               class="card text-white bg-gray mb-3 h-100 text-center"
             >
               <div class="card-body">
-                <h3 class="card-title">Fine Art</h3>
+                <h3 class="card-title">Paintings & Sketches</h3>
                 <img
                   class="card-img-top"
                   src="../assets/coffee-script/coffeecup.png"

@@ -2,27 +2,34 @@
   <ScrollUpButton />
   <PageTitle :Title="experienceTitle" />
   <div class="central-box">
-    <div style="width: 100%">
-      <div >
-        <ListBuilder :listObject="experienceItems.skills" />
+    <div style="width: 100%;">
+      <div>
+        <ListBuilder :listObject="experienceItems.professionalExperience1" />
+      </div>
+      <div>
+        <ListBuilder :listObject="experienceItems.professionalExperience2" />
+      </div>
+      <div>
+        <ListBuilder :listObject="experienceItems.professionalExperience3" />
       </div>
     </div>
     <hr class="line-break" />
-    
+  </div>
+  <PageTitle :Title="technicalSkillsTitle" />
+  <div class="central-box">
+
+
     <div style="width: 100%">
       <div class="inner-wrap-half">
-        <ListBuilder :listObject="experienceItems.cloudService" />
+        <ListBuilder :listObject="experienceItems.programmingLanguages" />
+        <ListBuilder :listObject="experienceItems.frameworks" />
+        <ListBuilder :listObject="experienceItems.containerTechnologies" />
+        <ListBuilder :listObject="experienceItems.ciCd"/>
+
       </div>
       <div class="inner-wrap-half">
-        <ListBuilder :listObject="experienceItems.containerDeployment" />
-      </div>
-    </div>
-    <div style="width: 100%">
-      <div class="inner-wrap-half">
-        <ListBuilder :listObject="experienceItems.programming" />
-      </div>
-      <div class="inner-wrap-half">
-        <ListBuilder :listObject="experienceItems.versionTools" />
+        <ListBuilder :listObject="experienceItems.amazonWebServices" />
+        <ListBuilder :listObject="experienceItems.tools" />
       </div>
     </div>
   </div>
@@ -45,59 +52,194 @@ export default {
         text: "Professional Experience",
         span: "."
       },
+      technicalSkillsTitle: {
+        text: "Technical Skills",
+        span: ".",
+      },
       experienceItems: {
-        programming: {
-          title: "Programming",
+        programmingLanguages: {
+          title: "Programming Languages",
           items: [
-            { text: "Utilized JavaScript and frontend frameworks to create responsive and user-friendly interfaces." },
-            { text: "Developed and maintained Ruby on Rails applications, implementing robust and scalable backend functionality. " },
-            { text: "Experience monitoring Redis queues and dynamically scaling a Sidekiq application in Kubernetes based on the number of jobs in the queues, optimizing resource utilization and responsiveness." },
-          ]
+            {
+              text: "TypeScript/HTML/CSS",
+            },
+            {
+              text: "Ruby",
+            },
+            {
+              text: "Java",
+            },
+            {
+              text: "C/C++",
+            },
+            {
+              text: "Python",
+            },
+          ],
         },
-        cloudService: { 
-          title: "AWS Cloud Services",
+        frameworks: {
+          title: "Frameworks/Libraries",
           items: [
-            { text: "Managed cloud infrastructure on AWS, deploying applications on EKS." },
-            { text: "Utilized ECR for creating and managing private container registries, enabling secure storage and distribution of Docker container images." },
-            { text: "Leveraged S3 for scalable and cost-effective storage of files and assets." },
-            { text: "Implemented asynchronous communication between systems using SQS for reliable message queuing." },
-            { text: "Managed DNS records and routing using Route 53 for seamless access to applications." }
-          ]
+            {
+              text: "React",
+            },
+            {
+              text: "Angular",
+            },
+            {
+              text: "Vue",
+            },
+            {
+              text: "Ruby on Rails",
+            },
+            {
+              text: "Spring",
+            },
+            {
+              text: "Node.js",
+            },
+          ],
         },
-        containerDeployment: {
+        containerTechnologies: {
           title: "Container Technologies",
           items: [
-            { text: "Hosted Ruby on Rails applications on Kubernetes clusters, ensuring seamless deployment and scalability via Keda (Kubernetes event-driven autoscaling)." },
-            { text: "Managed cloud infrastructure on AWS, deploying applications on EKS." },
-            { text: "Experience utilizing Kubernetes features such as deployments, services, and ingress controllers to manage application resources effectively." },
-            { text: "Utilized Docker for containerization, ensuring consistency and portability of applications across environments, as well as facilitating efficient deployment and orchestration of Ruby on Rails applications."}
-          ]
+            {
+              text: "Docker",
+            },
+            {
+              text: "Kubernetes",
+            },
+            {
+              text: "KEDA (Kubernetes Event Driven Autoscaling)",
+            },
+          ],
         },
-        versionTools: {
-          title: "Versioning Tools and Deployment",
+        ciCd: {
+          title: "CI/CD",
           items: [
-            { text: "Collaborated with cross-functional teams using GitLab and Bitbucket for version control and code collaboration." },
-            { text: "Implemented CI/CD pipelines with Drone CI, automating build, test, and deployment processes." },
-            { text: "Utilized Jira for project management, tracking tasks, and ensuring project milestones and deadlines were met."}
-          ]
+            {
+              text: "GitLab",
+            },
+            {
+              text: "Drone CI",
+            },
+          ],
         },
-        skills: {
-          title: "Skills",
+        amazonWebServices: {
+          title: "Amazon Web Services",
           items: [
-            { text: "Programming Languages: Ruby on Rails, JavaScript, C/C++, Python" },
-            { text: "Job Processing: Sidekiq, Redis" },
-            { text: "Container Technologies: Docker, Kubernetes (EKS), Keda (Kubernetes Event-Driven Autoscaling)" },
-            { text: "AWS Cloud Services: EKS, EC2, ECR, Lambda, S3, SQS, Route 53" },
-            { text: "Version Control: GitLab, Bitbucket, Github" },
-            { text: "CI/CD: Drone CI, GitLab" },
-            { text: "Project Management: Jira" },
+            {
+              text: "Elastic Kubernetes Service (EKS)",
+            },
+            {
+              text: "Elastic Container Service (ECS)",
+            },
+            {
+              text: "Elastic Compute Cloud (EC2)",
+            },
+            {
+              text: "Elastic Container Registry (ECR)",
+            },
+            {
+              text: "Lambda",
+            },
+            {
+              text: "DynamoDB"
+            },
+            {
+              text: "API Gateway"
+            },
+            {
+              text: "Cloud Map",
+            },
+            {
+              text: "Cloudwatch Alarms"
+            },
+            {
+              text: "Route 53"
+            },
+            {
+              text: "Simple Storage Service (S3)"
+            }
+          ],
+        },
+        tools: {
+          title: "Tools",
+          items: [
+            {
+              text: "Git",
+            },
+            {
+              text: "Linux",
+            },
+            {
+              text: "Jira",
+            },
+            {
+              text: "GitLab",
+            },
+            {
+              text: "Bitbucket",
+            },
+          ],
+        },
+        professionalExperience1: {
+          title: "Software Engineer",
+          items: [
+            { text: "Commerce Architects" },
+            {
+              text: "October 2023 - Present",
+              subInfo: [
+                { text: "Developed ecommerce frontend applications using React, TypeScript, and Next.js. Implemented state management solutions using Jotai and query management with React Query." },
+                { text: "Built and maintained backend APIs using Java and Spring Boot." },
+                { text: "Integrated and managed third-party APIs to extend application functionality." },
+                { text: "Managed AWS infrastructure using Terraform, provisioning and configuring AWS resources such as API Gateway, ECS, Cloud Map, Cloudwatch Alarms, Route 53, and Lambda" },
+                { text: "Deployed and managed containerized Java/Spring Boot applications with ECS (Elastic Container Service) and ECR (Elastic Container Registry)." },
+                { text: "Deployed and managed TypeScript/Node.js applications on Lambda and API Gateway." },
+                { text: "Collaborated with cross-functional teams in fast-paced environments, ensuring timely project delivery and clear communication." },
+                { text: "Authored comprehensive documentation on core features and integrations for both internal and external stakeholders." },
+                { text: "Designed architecture diagrams to visualize system designs and feature flows." },
+                { text: "Provided support to team members through pair programming sessions, performing thorough code reviews, and active communication." },
+                { text: "Revamped the onboarding process for new software engineers." },
+              ]
+            }
           ]
         },
+        professionalExperience2: {
+          title: "Software Engineer",
+          items: [
+            { text: "Two Barrels LLC" },
+            {
+              text: "May 2022 - September 2023",
+              subInfo: [
+                { text: "Used JavaScript, Node.js, and Puppeteer to automate tasks such as form submissions, data scraping, and document processing." },
+                { text: "Built components for web applications using Vue.js, managing state with Vuex and integrating with an internal REST API." },
+                { text: "Developed and maintained scalable and robust Ruby on Rails applications." },
+                { text: "Deployed Ruby on Rails applications EKS-backed Kubernetes clusters, leveraging Docker for containerization, and ECR for secure Docker container image storage." },
+                { text: "Experience utilizing Kubernetes features such as deployments, services, and ingress controllers to manage application resources effectively." },
+                { text: "Optimized Sidekiq job processing using KEDA (Kubernetes Event-Driven Autoscaling) to scale applications in Kubernetes based on Redis queue job volume." },
+                { text: "anaged other AWS infrastructure such as S3 for file storage and Route 53 for DNS routing." },
+                { text: "Designed CI/CD pipelines with Drone CI and GitLab to automate build, test, and deploy processes." },
+              ]
+            }
+          ]
+        },
+        professionalExperience3: {
+          title: "Computer Science Tutor",
+          items: [
+            { text: "Whitworth University" },
+            {
+              text: "September 2021 - February 2022",
+              subInfo: [
+                { text: "Assisted the computer science department at Whitworth University by communicating with professors about classes and working with first- and second-year computer science students, helping with various questions and problems regarding assignments and projects." }
+              ]
+            }
+          ]
+        }
       },
     }
   }
 }
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="list-box">
+  <div>
     <h3>{{ listObject.title }}</h3>
     <ul v-if="listObject.items">
       <li :key="item.text" v-for="item in listObject.items">
@@ -25,16 +25,11 @@ export default {
 </script>
 
 <style scoped>
-.list-box {
-  padding: 10px;
-}
-
 ul {
   font-size: calc(0.75em + 1vmin);
 }
 
 ul li ul {
-  color: var(--med-blue);
   font-size: calc(0.5em + 1vmin);
 }
 </style>
